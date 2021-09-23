@@ -82,7 +82,7 @@ class Auth extends CI_Controller {
                'email' => $this->input->post('email',true),
                'password' => $this->password->hash($this->input->post('password',true)),
                'tanggal'=>date('Y-m-d'),
-               'status'=>'user'
+               'status'=>'admin'
             ];
 
             $this->M_Auth->tambah($data);

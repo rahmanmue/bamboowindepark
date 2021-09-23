@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
    {
       parent::__construct();
       login();
-      onlyAdmin();
+      onlySuperAdmin();
       $this->load->library('password');
       $this->load->Model('M_Auth');
        

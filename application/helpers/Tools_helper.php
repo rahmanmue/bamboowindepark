@@ -18,12 +18,12 @@
 		 }   
 	}
 
-	if (!function_exists('onlyAdmin')){
+	if (!function_exists('onlySuperAdmin')){
 		
-		function onlyAdmin(){
+		function onlySuperAdmin(){
 			$ci =& get_instance();
 			$ci->load->Model('M_Auth');
-			if($ci->M_Auth->detail($ci->session->userdata('user_id'))->status == 'user'){
+			if($ci->M_Auth->detail($ci->session->userdata('user_id'))->status == 'admin'){
 				return show_404();
 			}
 		}

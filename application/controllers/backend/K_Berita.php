@@ -6,7 +6,7 @@ class K_Berita extends CI_Controller {
    public function __construct(){
       parent::__construct();
       login();
-      onlyAdmin();
+      onlySuperAdmin();
       $this->load->model(['M_Kberita','M_Auth',]);
       
    }
