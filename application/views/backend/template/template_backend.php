@@ -37,7 +37,7 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
                <li class="nav-item ">
-                  <a class="nav-link btn btn-info text-white menu-icon" href="<?=base_url('backend/profil')?>">  <i class="fas fa-user-tie"></i><span class="ml-2"><?=$userAktif->nama??''?></span></a>
+                  <a class="nav-link btn btn-info text-white menu-icon" href="<?=base_url('myprofil')?>">  <i class="fas fa-user-tie"></i><span class="ml-2"><?=$userAktif->nama??''?></span></a>
                </li>
                <li class="nav-item ">
                   <a class="nav-link btn btn-success text-white menu-icon" href="<?=base_url()?>" target="blank"><i class="fas fa-home"></i><span class="ml-2">HomePage</span></a>
@@ -55,7 +55,7 @@
     <nav id="sidebar">
          <ul class="list-unstyled">
             <li>
-               <a href="<?=base_url('backend/admin');?>" class="<?=menuAktif('admin')?>">
+               <a href="<?=base_url('list-admin');?>" class="<?=menuAktif('admin')?>">
                   <i class="fas fa-user-cog"></i><span class="ml-3">USER</span>
                </a>
             </li>

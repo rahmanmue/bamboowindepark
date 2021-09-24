@@ -12,7 +12,7 @@
 
    <div class="row ">
       <div class="col-md-12 ">
-         <a href="<?=base_url('kategori/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> KATEGORI</a>
+         <a href="<?=base_url('kategori-berita/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> KATEGORI</a>
       </div>
    </div>
    
@@ -35,11 +35,11 @@
          <td><?= $kategori->urutan?></td>
          <td>
           <div class="text-center tengah" >
-            <form action="<?=base_url('kategori/edit')?>" method="post" >
+            <form action="<?=base_url('kategori-berita/edit')?>" method="post" >
                <input type="hidden" name="id" value="<?=$kategori->id_kategori?>">
                <button type="submit" class="btn btn-primary mr-1 btn-sm"><i class="fa fa-edit"></i></button>
             </form>
-            <form action="<?=base_url('kategori/hapus')?>" method="post" >
+            <form action="<?=base_url('kategori-berita/hapus')?>" method="post" >
                <input type="hidden" name="id" value="<?=$kategori->id_kategori?>">
                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Dengan Menghapus ' +'<?=$kategori->kategori?>'+' Maka Artikel yang Memiliki Kategori '+'<?=$kategori->kategori?>'+ ' akan terhapus ?')"><i class="fa fa-trash"></i></button>
             </form>

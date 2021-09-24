@@ -35,7 +35,7 @@ class Admin extends CI_Controller {
          'title'=>'Edit User',
          'user'=>$this->M_Auth->detail($this->input->post('id')),
          'isi'=>'backend/admin/edit_user',
-         'action'=>base_url('admin/edit'),
+         'action'=>base_url('list-admin/edit'),
          'userAktif'=>$userAktif
       ];
      
@@ -54,7 +54,7 @@ class Admin extends CI_Controller {
             ];
          }else if(strlen($this->input->post('password')) > 1 && strlen($this->input->post('password')) < 6){
             $this->session->set_flashdata('gagal','Password Anda kurang dari 6 Karakter');	
-            redirect('admin/edit');
+            redirect('list-admin/edit');
          }else{
             $dataUser=[
                'nama' => $this->input->post('nama',true),
@@ -69,7 +69,7 @@ class Admin extends CI_Controller {
             'pesan' => 'Akun anda berhasil di Edit' 
          ];
          $this->session->set_flashdata($datapesan);
-         redirect('admin');
+         redirect('list-admin');
       }
    
    }
@@ -82,7 +82,7 @@ class Admin extends CI_Controller {
          'pesan' => 'Akun berhasil di hapus' 
       ];
       $this->session->set_flashdata($datapesan);
-      redirect('admin');
+      redirect('list-admin');
    }
 
 

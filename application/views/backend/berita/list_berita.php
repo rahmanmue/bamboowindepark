@@ -12,7 +12,7 @@
    
    <div class="row">
       <div class="col-md-12">
-         <a href="<?=base_url('berita/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> ARTIKEL</a>
+         <a href="<?=base_url('list-berita/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> ARTIKEL</a>
       </div>
    </div>
    
@@ -43,11 +43,11 @@
          <td><?=$berita->penulis?></td>
          <td>
          <div class="text-center" >
-            <form action="<?=base_url('berita/edit')?>" method="post" style="display: inline-block;">
+            <form action="<?=base_url('list-berita/edit')?>" method="post" style="display: inline-block;">
                <input type="hidden" name="id" value="<?=$berita->id_berita?>">
                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
             </form>
-            <form action="<?=base_url('berita/hapus')?>" method="post" style="display: inline-block;">
+            <form action="<?=base_url('list-berita/hapus')?>" method="post" style="display: inline-block;">
                <input type="hidden" name="id" value="<?=$berita->id_berita?>">
                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin Menghapus ini ?')"><i class="fa fa-trash"></i></button>
             </form>

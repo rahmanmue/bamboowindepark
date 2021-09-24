@@ -33,7 +33,7 @@ class K_Berita extends CI_Controller {
             $data=[
                 'title'=>'Tambah Kategori Berita',
                 'isi'=>'backend/berita/form_kberita',
-                'action'=>base_url('kategori/tambah'),
+                'action'=>base_url('kategori-berita/tambah'),
                 'button'=>'Tambah'
             ];
             $this->load->view($template, $data);
@@ -51,7 +51,7 @@ class K_Berita extends CI_Controller {
                 'pesan'=>'Data Berhasil ditambahkan'
                 ];
             $this->session->set_flashdata($pesan);
-            redirect('kategori/berita');  
+            redirect('kategori-berita/berita');  
         }
    }
 
@@ -66,7 +66,7 @@ class K_Berita extends CI_Controller {
             'title'=>'Edit Kategori',
             'kategori'=>$this->M_Kberita->getKategoriById($this->input->post('id')),
             'isi'=>'backend/berita/form_kberita',
-            'action'=>base_url('kategori/edit'),
+            'action'=>base_url('kategori-berita/edit'),
             'button'=>'Edit'
          ];
          $this->load->view($template,$data);
@@ -84,7 +84,7 @@ class K_Berita extends CI_Controller {
             'pesan'=>'Data Berhasil di ubah'
          ];
          $this->session->set_flashdata($pesan);
-         redirect('kategori');     
+         redirect('kategori-berita');     
       }
    }
 
@@ -96,7 +96,7 @@ class K_Berita extends CI_Controller {
       ];
       $this->session->set_flashdata($pesan);
        
-      redirect('kategori');
+      redirect('kategori-berita');
    }
 }
 

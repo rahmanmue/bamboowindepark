@@ -33,11 +33,11 @@
         <?php if($userAktif->status == 'admin'){?>
         <td class="text-center">
         <div class="text-center" >
-            <form action="<?=base_url('admin/edit')?>" method="post" style="display: inline-block;">
+            <form action="<?=base_url('list-admin/edit')?>" method="post" style="display: inline-block;">
                <input type="hidden" name="id" value="<?=$user->id_auth?>">
                <button type="submit" class="btn btn-primary btn-sm "><i class="fa fa-edit"></i></button>
             </form>
-            <form action="<?=base_url('admin/hapus')?>" method="post" style="display: inline-block;">
+            <form action="<?=base_url('list-admin/hapus')?>" method="post" style="display: inline-block;">
                <input type="hidden" name="id" value="<?=$user->id_auth?>">
                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apa Anda Yakin Ingin Menghapus ini')"><i class="fa fa-trash"></i></button>
             </form>

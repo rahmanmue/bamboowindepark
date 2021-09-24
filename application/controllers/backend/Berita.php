@@ -32,7 +32,7 @@ class Berita extends CI_Controller {
          'title'=>'Tambah Berita',
          'isi'=>'backend/berita/form_berita',
          'listKategori'=>$kategori,
-         'action'=>base_url('berita/tambah'),
+         'action'=>base_url('list-berita/tambah'),
          'button'=>'Tambah'
       ];
 
@@ -60,7 +60,7 @@ class Berita extends CI_Controller {
                'pesan'=>'Data Berhasil ditambahkan'
             ];
             $this->session->set_flashdata($pesan);
-            redirect('berita'); 
+            redirect('list-berita'); 
       }
 
 
@@ -75,7 +75,7 @@ class Berita extends CI_Controller {
       $data=[  
                'title'=>'Edit Berita',
                'isi'=>'backend/berita/form_berita',
-               'action'=>base_url('berita/edit'),
+               'action'=>base_url('list-berita/edit'),
                'button'=>'Edit',
                'listKategori'=>$kategori,
                'berita'=>$berita             
@@ -102,7 +102,7 @@ class Berita extends CI_Controller {
                   'pesan'=>'Data Berhasil di ubah'
                ];
                $this->session->set_flashdata($pesan);
-               redirect('berita');
+               redirect('list-berita');
          }      
    }
       
@@ -113,7 +113,7 @@ class Berita extends CI_Controller {
          'pesan'=>'Data Berhasil dihapus'
       ];
       $this->session->set_flashdata($pesan);
-      redirect('berita');
+      redirect('list-berita');
    }
 
    

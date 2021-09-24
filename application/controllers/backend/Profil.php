@@ -19,7 +19,7 @@ class Profil extends CI_Controller {
          'title'=>'Profil',
          'userAktif'=>$userAktif,
          'isi'=>'backend/profil/update_profil',
-         'action'=>base_url('profil/save')
+         'action'=>base_url('myprofil/save')
       ];
 
       $this->load->view($template,$data);
@@ -43,7 +43,7 @@ class Profil extends CI_Controller {
             ];
          }else if(strlen($this->input->post('password')) > 1 && strlen($this->input->post('password')) < 6 && $this->input->post('password') != ''){
             $this->session->set_flashdata('gagal','Password Anda kurang dari 6 Karakter');	
-            redirect('profil');
+            redirect('myprofil');
          }else{
             $dataUser=[
                'nama' => $this->input->post('nama',true),
@@ -59,7 +59,7 @@ class Profil extends CI_Controller {
          ];
 
          $this->session->set_flashdata($datapesan);
-         redirect('dashboard');
+         redirect('dashboard-web');
       }
    }
 

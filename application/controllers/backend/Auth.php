@@ -14,7 +14,7 @@ class Auth extends CI_Controller {
 	{
       $template = 'backend/template/template_auth';
 		if($this->session->userdata('user_id')){
-            redirect('dashboard');
+            redirect('dashboard-web');
          }
    
    
@@ -41,7 +41,7 @@ class Auth extends CI_Controller {
 
            $this->session->set_userdata($dataLogin);
             //pindahkan ke halaman home
-            redirect('dashboard');
+            redirect('dashboard-web');
 
             }else{
                $dataPesan = [
@@ -61,7 +61,7 @@ class Auth extends CI_Controller {
     {
         $template = 'backend/template/template_auth';
         if($this->session->userdata('user_id')){
-           redirect('dashboard');
+           redirect('dashboard-web');
          }
     
          $this->form_validation->set_rules('nama','Nama','required');

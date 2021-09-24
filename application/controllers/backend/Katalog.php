@@ -31,7 +31,7 @@ class Katalog extends CI_Controller {
       $data =[
          'title'=>'Tambah Katalog',
          'isi'=>'backend/katalog/form_katalog',
-         'action'=>base_url('katalog/tambah'),
+         'action'=>base_url('list-katalog/tambah'),
          'button'=>'Tambah'
          //  'listKategori'=>$kategori,
       ];
@@ -62,7 +62,7 @@ class Katalog extends CI_Controller {
                'pesan'=>'Data Berhasil ditambahkan'
             ];
             $this->session->set_flashdata($pesan);
-            redirect('katalog'); 
+            redirect('list-katalog'); 
       }
 
 
@@ -77,7 +77,7 @@ class Katalog extends CI_Controller {
       $data=[  
                'title'=>'Edit Berita',
                'isi'=>'backend/katalog/form_katalog',
-               'action'=>base_url('katalog/edit'),
+               'action'=>base_url('list-katalog/edit'),
                'button'=>'Edit',
                'katalog'=>$katalog             
                // 'listKategori'=>$kategori,
@@ -108,7 +108,7 @@ class Katalog extends CI_Controller {
                 'pesan'=>'Data Berhasil di ubah'
             ];
             $this->session->set_flashdata($pesan);
-            redirect('katalog');
+            redirect('list-katalog');
         }      
    }
       
@@ -119,7 +119,7 @@ class Katalog extends CI_Controller {
          'pesan'=>'Data Berhasil dihapus'
       ];
       $this->session->set_flashdata($pesan);
-      redirect('katalog');
+      redirect('list-katalog');
    }
 
    

@@ -59,27 +59,27 @@ $route['auth/logout'] = 'backend/auth/logout';
 
 $route['myprofil'] = 'backend/profil/index';
 
-$route['admin'] = 'backend/admin/index';
-$route['admin/edit'] = 'backend/admin/edit';
-$route['admin/hapus'] = 'backend/admin/hapus';
+$route['list-admin'] = 'backend/admin/index';
+$route['list-admin/edit'] = 'backend/admin/edit';
+$route['list-admin/hapus'] = 'backend/admin/hapus';
 
-$route['kategori'] = 'backend/k_berita/index';
-$route['kategori/tambah'] = 'backend/k_berita/tambah';
-$route['kategori/edit'] = 'backend/k_berita/edit';
-$route['kategori/hapus'] = 'backend/k_berita/hapus';
+$route['kategori-berita'] = 'backend/k_berita/index';
+$route['kategori-berita/tambah'] = 'backend/k_berita/tambah';
+$route['kategori-berita/edit'] = 'backend/k_berita/edit';
+$route['kategori-berita/hapus'] = 'backend/k_berita/hapus';
 
-$route['berita'] = 'backend/berita/index';
-$route['berita/tambah'] = 'backend/berita/tambah';
-$route['berita/edit'] = 'backend/berita/edit';
-$route['berita/hapus'] = 'backend/berita/hapus';
+$route['list-berita'] = 'backend/berita/index';
+$route['list-berita/tambah'] = 'backend/berita/tambah';
+$route['list-berita/edit'] = 'backend/berita/edit';
+$route['list-berita/hapus'] = 'backend/berita/hapus';
 
-$route['dashboard'] = 'backend/dashboard/index';
-$route['konfigurasi'] = 'backend/konfigurasi/index';
+$route['dashboard-web'] = 'backend/dashboard/index';
+$route['konfigurasi-web'] = 'backend/konfigurasi/index';
 
-$route['katalog'] = 'backend/katalog/index';
-$route['katalog/tambah'] = 'backend/katalog/tambah';
-$route['katalog/edit'] = 'backend/katalog/edit';
-$route['katalog/hapus'] = 'backend/katalog/hapus';
+$route['list-katalog'] = 'backend/katalog/index';
+$route['list-katalog/tambah'] = 'backend/katalog/tambah';
+$route['list-katalog/edit'] = 'backend/katalog/edit';
+$route['list-katalog/hapus'] = 'backend/katalog/hapus';
 
 
 
