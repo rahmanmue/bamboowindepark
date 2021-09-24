@@ -6,18 +6,28 @@ class Dashboard extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->Model('M_Auth');
         login();
+        $this->load->model(['M_Auth','M_Kberita','M_Berita','M_Konfigurasi']); 
        
     }
 
     public function index(){
-        echo 'Hello World';
-    }
+        $template = 'backend/template/template_backend';
+        $site = $this->M_Konfigurasi->get();
+        $data=[
+           "title"=>"Dashboard | " .$site->namaweb,
+           "isi"=>"backend/dashboard/dashboard",
+           "user"=>$this->M_Auth->countAll(),
+           "kategori"=>$this->M_Kberita->countAll(),
+           "artikel"=>$this->M_Berita->countAll(),
+        ];
+       
+        $this->load->view($template, $data);
+     }
+}
 
 
 
    
 
 
-}

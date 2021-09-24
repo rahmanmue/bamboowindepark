@@ -18,7 +18,7 @@
         <th>Username</th>
         <th>Email</th>
         <th>Status</th>
-        <?php if($userAktif->status == 'admin'){?>
+        <?php if($userAktif->status == 'superadmin'){?>
         <th class="text-center">Aksi</th>
         <?php } ?>
     </tr>
@@ -30,8 +30,8 @@
         <td><?= $user->nama ;?></td>
         <td><?= $user->email ;?></td>
         <td><?= $user->status ;?></td>
-        <?php if($userAktif->status == 'admin'){?>
-        <td class="text-center">
+        <?php if($userAktif->status == 'superadmin'){?>
+        <td>
         <div class="text-center" >
             <form action="<?=base_url('list-admin/edit')?>" method="post" style="display: inline-block;">
                <input type="hidden" name="id" value="<?=$user->id_auth?>">
