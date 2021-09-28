@@ -14,6 +14,7 @@ class Konfigurasi extends CI_Controller {
       $data=[
          "title"=>"Konfigurasi",
          "isi"=>"backend/konfigurasi/konfigurasi",
+         "action"=> base_url('backend/konfigurasi/konfig'),
          "konfigurasi"=>$this->M_Konfigurasi->get()
       ];
 
@@ -26,7 +27,7 @@ class Konfigurasi extends CI_Controller {
             "deskripsi_web"=>$this->input->post('deskripsi_web',true),
             "email"=>$this->input->post('email',true),
             "alamat"=>$this->input->post('alamat',true),
-            "no_wa"=>$this->input->post('no_wa',true),
+            "no_telp"=>$this->input->post('no_telp',true),
             "fb"=>$this->input->post('fb',true),
             "ig"=>$this->input->post('ig',true),
             "tanggal"=>date('Y-m-d H:i:s'),
@@ -40,7 +41,7 @@ class Konfigurasi extends CI_Controller {
          'pesan'=>'Data Berhasil di ubah'
       ];
       $this->session->set_flashdata($pesan);
-        redirect('konfigurasi');      
+        redirect('konfigurasi-web');      
    }
 
 }

@@ -74,12 +74,17 @@ $route['list-berita/edit'] = 'backend/berita/edit';
 $route['list-berita/hapus'] = 'backend/berita/hapus';
 
 $route['dashboard-web'] = 'backend/dashboard/index';
-$route['konfigurasi-web'] = 'backend/konfigurasi/index';
+$route['konfigurasi-web'] = 'backend/konfigurasi';
 
 $route['list-katalog'] = 'backend/katalog/index';
 $route['list-katalog/tambah'] = 'backend/katalog/tambah';
 $route['list-katalog/edit'] = 'backend/katalog/edit';
 $route['list-katalog/hapus'] = 'backend/katalog/hapus';
+
+$route['list-banner'] = 'backend/banner/index';
+$route['list-banner/tambah'] = 'backend/banner/tambah';
+$route['list-banner/edit'] = 'backend/banner/edit';
+$route['list-banner/hapus'] = 'backend/banner/hapus';
 
 
 

@@ -1,6 +1,6 @@
 <div class="container mt-5">    
 
-<form action="<?= base_url('konfigurasi/konfig') ?>" method="post" id="border" enctype="multipart/form-data">
+<form action="<?= $action ?>" method="post" id="border" enctype="multipart/form-data">
 
    <?php if($this->session->flashdata('pesan')) :?>
       <div class="<?=$this->session->flashdata('alert')?> alert-dismissible fade show" role="alert">
@@ -32,7 +32,7 @@
             
             <div class="form-group row">
             <label class="col-sm-2">No Telepon</label>
-            <input type="text" name="no_wa" value="<?= $konfigurasi->no_telp?>" class="form-control col-sm-10" required>
+            <input type="text" name="no_telp" value="<?= $konfigurasi->no_telp?>" class="form-control col-sm-10" required>
 
             </div>
 
