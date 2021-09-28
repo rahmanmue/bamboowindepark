@@ -109,7 +109,7 @@ class Berita extends CI_Controller {
    public function hapus(){
       $this->M_Berita->hapus($this->input->post('id'));
       $pesan = [
-         'alert'=>'alert alert-danger',
+         'alert'=>'alert alert-success',
          'pesan'=>'Data Berhasil dihapus'
       ];
       $this->session->set_flashdata($pesan);

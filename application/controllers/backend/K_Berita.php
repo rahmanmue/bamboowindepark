@@ -91,7 +91,7 @@ class K_Berita extends CI_Controller {
    public function hapus(){
       $this->M_Kberita->hapusKategori($this->input->post('id'));
       $pesan = [
-         'alert'=>'alert alert-danger',
+         'alert'=>'alert alert-success',
          'pesan'=>'Data Berhasil di hapus'
       ];
       $this->session->set_flashdata($pesan);

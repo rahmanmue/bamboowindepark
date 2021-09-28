@@ -1,7 +1,7 @@
 <div class="container mt-5">
    <div id="border">
 
-  <?php if($this->session->flashdata('pesan')) :?>
+  <?php if($this->session->flashdata('alert') == 'alert alert-success') :?>
    <div class="<?=$this->session->flashdata('alert')?> alert-dismissible fade show" role="alert">
    <?=$this->session->flashdata('pesan')?>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
