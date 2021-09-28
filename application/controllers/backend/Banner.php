@@ -17,7 +17,7 @@ class Banner extends CI_Controller {
     $data=[
        'title'=>'Banner',
        'listBanner'=> $listBanner,
-       'isi'=>'backend/gambar/list_banner'
+       'isi'=>'backend/banner/list_banner'
     ];
 
     $this->load->view($template,$data);
@@ -31,7 +31,7 @@ class Banner extends CI_Controller {
     if($this->form_validation->run()==FALSE){
        $data=[
           'title'=>'Tambah Banner',
-          'isi'=>'backend/gambar/form_banner',
+          'isi'=>'backend/banner/form_banner',
           'action'=>base_url('list-banner/tambah'),
           'button'=>'Tambah'
        ];
@@ -63,7 +63,7 @@ class Banner extends CI_Controller {
     if($this->form_validation->run()==FALSE){
        $data=[
           'title'=>'Edit Banner',
-          'isi'=>'backend/gambar/form_banner',
+          'isi'=>'backend/banner/form_banner',
           'banner'=>$this->M_Banner->getIdBanner($this->input->post('id')),
           'action'=>base_url('list-banner/edit'),
           'button'=>'Edit'
@@ -97,12 +97,12 @@ class Banner extends CI_Controller {
 
  }
 
- public function kumpulanGambar(){
-    $template = 'backend/template/template_backend';
-    $homepage = file_get_contents(base_url('assets/uploads/files/'));
-    foreach($homepage as $home){
-        echo $home;
-    }
-   //  $this->load->view($template,$data);
-    }
+//  public function kumpulanGambar(){
+//     $template = 'backend/template/template_backend';
+//     $homepage = file_get_contents(base_url('assets/uploads/files/'));
+//     foreach($homepage as $home){
+//         echo $home;
+//     }
+//    //  $this->load->view($template,$data);
+//     }
 }
