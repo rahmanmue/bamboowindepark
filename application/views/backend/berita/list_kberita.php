@@ -22,7 +22,7 @@
       <tr class="font-weight-bold">
          <td>No</td>
          <td>Nama Kategori</td>
-         <td>Urutan</td>
+         <td>Urutan Kategori</td>
          <td  class="text-center">Aksi</td>
       </tr>
    </thead>

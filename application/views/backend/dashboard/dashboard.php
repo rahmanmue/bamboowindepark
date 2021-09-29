@@ -1,5 +1,5 @@
 <div id="border">
-<h3 class="panel panel-back mt-5 " style="padding: 10px;">DASHBOARD PAGE</h3>
+<h3 class="panel panel-back mt-5 font-weight-bold" style="padding: 10px;">DASHBOARD PAGE</h3>
 
 
 

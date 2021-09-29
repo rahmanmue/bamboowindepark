@@ -18,7 +18,7 @@
                    <label class='font-weight-bold'>Upload Gambar</label><small> (Ukuran dibawah 1mb) </small>
                    <div class='custom-file'>
                      <input type='file' class='custom-file-input' id='customFile' name='gambar'>
-                     <label class='custom-file-label' for='customFile'>Pilih Gambar minimal ukuran (300 x 250)</label>
+                     <label class='custom-file-label' for='customFile'>Rekomendasi ukuran gambar (1403 x 500)</label>
                   </div>
                      <small class='text-info'> Biarkan Jika tidak Ada & Jika tidak sesuai dengan format atau Ukuran Gambar maka gambar di set ke sebelumnya </small>                  
                   </div>
@@ -29,7 +29,7 @@
                <label for='keterangan'class='font-weight-bold'>Upload Gambar</label><small> (Ukuran dibawah 1mb) </small>
                <div class='custom-file'>
                   <input type='file' class='custom-file-input' id='customFile' name='gambar' required>
-                  <label class='custom-file-label' for='customFile'>Pilih Gambar minimal ukuran (300 x 250)</label>
+                  <label class='custom-file-label' for='customFile'>Rekomendasi ukuran gambar (1403 x 500)</label>
                </div>
                </div>";
             }

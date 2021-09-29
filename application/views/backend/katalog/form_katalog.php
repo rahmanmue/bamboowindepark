@@ -78,7 +78,7 @@
       
         <div class="form-group">
             <label class="font-weight-bold">Deskripsi</label>
-            <textarea name="deskripsi" placeholder="Deskripsi" id="editor"  class="form-control"><?=set_value('manfaat',$katalog->manfaat ??'')?></textarea>
+            <textarea name="deskripsi" placeholder="Deskripsi" id="editor"  class="form-control"><?=set_value('deskripsi',$katalog->deskripsi ??'')?></textarea>
 	    </div>
 
         <div class="form-group">

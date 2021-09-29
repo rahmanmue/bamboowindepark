@@ -41,7 +41,7 @@ class K_Berita extends CI_Controller {
             $dataKategori=[
                 'kategori'=>$this->input->post('kategori',true),
                 'urutan'=>$this->input->post('urutan',true),
-                'slug_kategori'=>url_title(strtolower($this->input->post('kategori',true),'dash',true))
+                'slug_kategori'=>url_title(strtolower($this->input->post('kategori',true)),'dash',true)
                 // 'gambar'=>$this->M_Kategori->upload()
             ];
      
@@ -51,7 +51,7 @@ class K_Berita extends CI_Controller {
                 'pesan'=>'Data Berhasil ditambahkan'
                 ];
             $this->session->set_flashdata($pesan);
-            redirect('kategori-berita/berita');  
+            redirect('kategori-berita');  
         }
    }
 
@@ -74,7 +74,7 @@ class K_Berita extends CI_Controller {
          $dataKategori=[
             'kategori'=>$this->input->post('kategori',true),
             'urutan'=>$this->input->post('urutan',true),
-            'slug_kategori'=>url_title(strtolower($this->input->post('kategori',true),'dash',true))
+            'slug_kategori'=>url_title(strtolower($this->input->post('kategori',true)),'dash',true)
            
          ];
 

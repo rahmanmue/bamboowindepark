@@ -75,7 +75,7 @@ class Katalog extends CI_Controller {
     //   $kategori = $this->M_Kberita->list();
 
       $data=[  
-               'title'=>'Edit Berita',
+               'title'=>'Edit Katalog',
                'isi'=>'backend/katalog/form_katalog',
                'action'=>base_url('list-katalog/edit'),
                'button'=>'Edit',
