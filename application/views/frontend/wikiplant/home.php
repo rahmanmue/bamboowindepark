@@ -63,7 +63,7 @@
                   <div class="card-body">
                     <h5 class="card-title poppins"><?=$berita->judul?></h5>
                     <div class="card-text"><?= word_limiter($berita->content, 20);?></div>
-                    <a href="<?= base_url('frontend/wikiplant/berita/'.$berita->slug_judul)?>" class="btn btn-info r-20 robot" >Baca Selengkapnya</a>
+                    <a href="<?= base_url('berita/'.$berita->slug_judul)?>" class="btn btn-info r-20 robot" >Baca Selengkapnya</a>
                   </div>
                </div>
               </div>
@@ -136,7 +136,7 @@
                   <!-- <i class="fas fa-fw fa-image fa-3x"></i> -->
                   <img src="<?=base_url("assets/uploads/katalog/".$katalog->gambar) ?>" class="img-fluid mb-3">
                   <h5 class="card-title poppins"><?=$katalog->judul?></h5>
-                  <a href="<?= base_url('frontend/wikiplant/katalog/'.$katalog->slug_judul)?>" class="btn btn-gl roboto" >Baca Selengkapnya</a>
+                  <a href="<?= base_url('katalog/'.$katalog->slug_judul)?>" class="btn btn-gl roboto" >Baca Selengkapnya</a>
                 </div>
               </div>
             </div>

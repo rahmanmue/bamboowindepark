@@ -62,6 +62,14 @@ class M_Katalog extends CI_Model{
       return $this->db->get('katalog')->num_rows();
    }
 
+   public function getKatalogPublish(){
+      $this->db->select('*');
+      $this->db->from('katalog');
+      $this->db->where('katalog.status', 'publish');
+      $query = $this->db->get();
+      return $query->result();
+   }
+
    //read
 	public function bacaKatalog($slug_judul) {
 		$this->db->select('katalog.*, auth.nama');

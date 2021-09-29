@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'wikiplant';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
@@ -86,6 +86,11 @@ $route['list-banner/tambah'] = 'backend/banner/tambah';
 $route['list-banner/edit'] = 'backend/banner/edit';
 $route['list-banner/hapus'] = 'backend/banner/hapus';
 
+$route['berita/(:any)'] = 'frontend/wikiplant/berita/$1';
+$route['katalog/(:any)'] = 'frontend/wikiplant/katalog/$1';
+
+$route['berita'] = 'wikiplant/berita_list';
+$route['katalog'] = 'wikiplant/katalog_list';
 
 
 

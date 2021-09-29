@@ -14,7 +14,7 @@
             
             </p>
             <hr>
-            <img src="<?=base_url('assets/uploads/katalog/'.$katalog->gambar)?>" class="img-fluid " width="560px" alt="">
+            <img src="<?=base_url('assets/uploads/katalog/'.$katalog->gambar)?>" class="img-fluid " width="660px" alt="">
             <hr>
 
               <hr>

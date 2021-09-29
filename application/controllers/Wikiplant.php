@@ -8,7 +8,7 @@ class Wikiplant extends CI_Controller {
         $this->load->model(['M_Berita','M_Konfigurasi','M_Kberita','M_Katalog','M_Banner']);
     }
 
-    public function home(){
+    public function index(){
         $template = 'frontend/template/template_web';
         $banner=$this->M_Banner->listBannerOn();
         $berita = $this->M_Berita->getLimitThree();
@@ -53,6 +53,45 @@ class Wikiplant extends CI_Controller {
             'isi'=> 'frontend/wikiplant/singlepage_katalog'
         ];
 		$this->load->view($template,$data);  
+    }
+
+    public function berita_list(){
+        $template = 'frontend/template/template_web';
+        $site	= $this->M_Konfigurasi->get();
+        $listBerita = $this->M_Berita->getBeritaPublish();
+		$data	= [
+            'title'	=> 'Berita',
+            'site'=>$site,       
+            'listBerita'=> $listBerita,
+            'isi'=> 'frontend/wikiplant/berita'
+        ];
+		$this->load->view($template,$data); 
+    }
+
+    public function berita_kategori($slug_kategori){
+        $template = 'frontend/template/template_web';
+        $site	= $this->M_Konfigurasi->get();
+        $listBerita = $this->M_Berita->getBeritaPublish();
+		$data	= [
+            'title'	=> 'Berita',
+            'site'=>$site,       
+            'listBerita'=> $listBerita,
+            'isi'=> 'frontend/wikiplant/berita'
+        ];
+		$this->load->view($template,$data); 
+    }
+
+    public function katalog_list(){
+        $template = 'frontend/template/template_web';
+        $site	= $this->M_Konfigurasi->get();
+        $listKatalog = $this->M_Katalog->getKatalogPublish();
+		$data	= [
+            'title'	=> 'Katalog',
+            'site'=>$site,       
+            'listKatalog'=> $listKatalog,
+            'isi'=> 'frontend/wikiplant/katalog'
+        ];
+		$this->load->view($template,$data); 
     }
 
     public function profil(){

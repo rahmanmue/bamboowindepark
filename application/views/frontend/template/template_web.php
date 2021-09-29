@@ -30,21 +30,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item <?= $this->uri->segment('1') == 'home' ? 'active': ''?>">
-                      <a class="nav-link" href="index.html"
+                      <a class="nav-link" href="<?=base_url()?>"
                         >HOME <span class="sr-only">(current)</span></a
                       >
                     </li>
                     <li class="nav-item <?= $this->uri->segment('1') == 'katalog' ? 'active': ''?>">
-                      <a class="nav-link" href="katalog.html">KATALOG SPESIES</a>
+                      <a class="nav-link" href="<?=base_url('katalog')?>">KATALOG SPESIES</a>
                     </li>
                     <li class="nav-item <?= $this->uri->segment('1') == 'berita' ? 'active': ''?>">
-                      <a class="nav-link" href="berita.html">BERITA</a>
+                      <a class="nav-link" href="<?=base_url('berita')?>">BERITA</a>
                     </li>
                     <li class="nav-item <?= $this->uri->segment('1') == 'profil' ? 'active': ''?>">
-                      <a class="nav-link" href="profil.html">PROFIL</a>
+                      <a class="nav-link" href="<?=base_url('profil')?>">PROFIL</a>
                     </li>
                     <li class="nav-item <?= $this->uri->segment('1') == 'hubungi' ? 'active': ''?>">
-                      <a class="nav-link" href="hubungi.html">HUBUNGI KAMI</a>
+                      <a class="nav-link" href="<?=base_url('hubungi')?>">HUBUNGI KAMI</a>
                     </li>
                   </ul>
             </div>

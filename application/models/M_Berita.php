@@ -77,17 +77,17 @@ class M_Berita extends CI_Model{
       } 
 
 
-   public function listPopuler() {
-		$this->db->select('berita.*, visitor.*');
-		$this->db->from('berita');
-		// Join
-		$this->db->join('visitor','visitor.id_berita = berita.id_berita', 'LEFT');
-		$this->db->where('berita.status','publish');
-		$this->db->order_by('visitor.views','DESC');
-		$this->db->limit(5);
-		$query = $this->db->get();
-		return $query->result();
-   }
+   // public function listPopuler() {
+	// 	$this->db->select('berita.*, visitor.*');
+	// 	$this->db->from('berita');
+	// 	// Join
+	// 	$this->db->join('visitor','visitor.id_berita = berita.id_berita', 'LEFT');
+	// 	$this->db->where('berita.status','publish');
+	// 	$this->db->order_by('visitor.views','DESC');
+	// 	$this->db->limit(5);
+	// 	$query = $this->db->get();
+	// 	return $query->result();
+   // }
 
    public function countAll()
    {
@@ -100,6 +100,26 @@ class M_Berita extends CI_Model{
       $this->db->limit(3, 'DESC');
       $query = $this->db->get();
       return $query->result();
+   }
+
+   public function getBeritaPublish(){
+      $this->db->select('*');
+      $this->db->from('berita');
+      $this->db->where('berita.status', 'publish');
+      $query = $this->db->get();
+      return $query->result();
+   }
+
+   public function bacaBerita($slug_judul) {
+		$this->db->select('berita.*, k_berita.kategori, auth.nama');
+		$this->db->from('berita');
+		// Join
+		$this->db->join('k_berita','k_berita.id_kategori = berita.id_kategori', 'LEFT');
+		$this->db->join('auth','auth.id_auth = berita.id_auth','LEFT');
+		// End join
+		$this->db->where('slug_judul',$slug_judul);
+		$query = $this->db->get();
+		return $query->row();
    }
 
    public function getBerita($perHalaman,$dataMulai) {
@@ -139,17 +159,7 @@ class M_Berita extends CI_Model{
    }
    
    //read
-	public function bacaBerita($slug_judul) {
-		$this->db->select('berita.*, k_berita.kategori, auth.nama');
-		$this->db->from('berita');
-		// Join
-		$this->db->join('k_berita','k_berita.id_kategori = berita.id_kategori', 'LEFT');
-		$this->db->join('auth','auth.id_auth = berita.id_auth','LEFT');
-		// End join
-		$this->db->where('slug_judul',$slug_judul);
-		$query = $this->db->get();
-		return $query->row();
-   }
+	
    
   
 }
