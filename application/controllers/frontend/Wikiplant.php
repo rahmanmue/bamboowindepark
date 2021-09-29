@@ -16,7 +16,7 @@ class Wikiplant extends CI_Controller {
         $site = $this->M_Konfigurasi->get();
 
         $data=[
-			'title'=> $site->namaweb | 'Home',
+			'title'=> $site->namaweb,
 			'site'=>$site,
             'banner'=>$banner,
 			'listBerita'=>$berita,
@@ -26,12 +26,33 @@ class Wikiplant extends CI_Controller {
 		$this->load->view($template,$data);
     }
 
-    public function katalog(){
+    public function berita($slug_judul){
+        $template = 'frontend/template/template_web';
+        $site	= $this->M_Konfigurasi->get();
+		$bacaBerita	= $this->M_Berita->bacaBerita($slug_judul);
+        $kategori_berita = $this->M_Kberita->list();
+		$data	= [
+            'title'	=> $bacaBerita->judul,
+            'site'=>$site,
+            'listKategori'=> $kategori_berita,        
+            'berita'=> $bacaBerita,
+            'isi'=> 'frontend/wikiplant/singlepage_berita'
+        ];
+		$this->load->view($template,$data); 
 
     }
 
-    public function berita(){
-
+    public function katalog($slug_judul){
+        $template = 'frontend/template/template_web';
+        $site	= $this->M_Konfigurasi->get();
+		$bacaKatalog	= $this->M_Katalog->bacaKatalog($slug_judul);
+		$data	= [
+            'title'	=> $bacaKatalog->judul,
+            'site'=>$site,       
+            'katalog'=> $bacaKatalog,
+            'isi'=> 'frontend/wikiplant/singlepage_katalog'
+        ];
+		$this->load->view($template,$data);  
     }
 
     public function profil(){

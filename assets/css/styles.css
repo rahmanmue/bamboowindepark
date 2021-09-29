@@ -188,6 +188,9 @@ nav, footer{
     -moz-box-shadow: 0px 4px 4px 0px rgba(153,152,152,0.75);
 }
 
+.bg-utama{
+    background-color:#42B883;
+}
 
 .roboto, p, footer>p{
     font-family: 'Roboto', 'sans-serif';
@@ -197,7 +200,7 @@ nav, footer{
     font-family: 'Poppins','sans-serif';
 }
 
-.card:hover{
+.cs:hover{
     box-shadow: 0px 0px 50px 2px rgba(153,152,152,0.75);
     -webkit-box-shadow: 0px 0px 50px 2px rgba(153,152,152,0.75);
     -moz-box-shadow: 0px 0px 50px 2px rgba(153,152,152,0.75);
@@ -265,10 +268,6 @@ nav, footer{
     height: 30px;
 }
 
-#slider{
-    height: 420px;
-    
-}
 
 #about{
     background-color: antiquewhite;
@@ -340,7 +339,11 @@ nav, footer{
     }
 
     #slider{
-        height: 150px;
+        height: 100px;
+    }
+
+    #berita{
+        margin-top: -70%;
     }
 
     .m-responsive{
@@ -350,11 +353,10 @@ nav, footer{
 
 @media(max-width:768px){
     #slider{
-        height: 150px;
+        height: 100px;
     }
     #sidebar {
         width: 150px;
-        margin-left:0px;
     }
     #sidebar.active {
         margin-left:-150px;
@@ -367,12 +369,23 @@ nav, footer{
     }
 }
 
-@media(min-width:1024px){
+@media(max-width:1024px){
     #slider{
         height: 380px;
     }
 }
 
+@media(max-width:768px){
+    #slider{
+        height: 150px;     
+    }
+}
+
+@media(max-width:1440px){
+    #slider{
+        height: 470px;
+    }
+}
 
 
 

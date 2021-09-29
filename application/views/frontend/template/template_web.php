@@ -29,21 +29,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item <?= this->uri->segment('1') == 'home' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == 'home' ? 'active': ''?>">
                       <a class="nav-link" href="index.html"
                         >HOME <span class="sr-only">(current)</span></a
                       >
                     </li>
-                    <li class="nav-item <?= this->uri->segment('1') == 'katalog' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == 'katalog' ? 'active': ''?>">
                       <a class="nav-link" href="katalog.html">KATALOG SPESIES</a>
                     </li>
-                    <li class="nav-item <?= this->uri->segment('1') == 'berita' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == 'berita' ? 'active': ''?>">
                       <a class="nav-link" href="berita.html">BERITA</a>
                     </li>
-                    <li class="nav-item <?= this->uri->segment('1') == 'profil' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == 'profil' ? 'active': ''?>">
                       <a class="nav-link" href="profil.html">PROFIL</a>
                     </li>
-                    <li class="nav-item <?= this->uri->segment('1') == 'hubungi' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == 'hubungi' ? 'active': ''?>">
                       <a class="nav-link" href="hubungi.html">HUBUNGI KAMI</a>
                     </li>
                   </ul>
@@ -70,30 +70,14 @@
       <div class="container p-4">
         <!--Grid row-->
         <div class="row">
-          <!--Grid column-->
-          <div class="col-md-6 mb-4 mb-md-0 small-devices">
-            <h5 class="text-uppercase">Lokasi</h5>
-    
-            <div class="card text-light text-center" style="max-width: 22rem;" >
-              <div class="card-body text-light" >
-                  <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.029317965409!2d106.94505033556736!3d-6.919588063329196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x261f558445241e0c!2sUniversitas%20Muhammadiyah%20Sukabumi!5e0!3m2!1sid!2sid!4v1616902829355!5m2!1sid!2sid"
-                      width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-          </div>
-          </div>
-          <!--Grid column-->
-    
-          <!--Grid column-->
-          <div class="col-md-6 mb-4 mb-md-0">
-            <h5>Hubungi Kami</h5>
-    
-            <!-- <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-              aliquam voluptatem veniam, est atque cumque eum delectus sint!
-            </p> -->
+          
 
+         
+    
+          <!--Grid column-->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="mb-5">Tentang Kami</h5>
+    
             <h6>Alamat</h6>
             <p><?= $site->alamat?></p> 
 
@@ -104,25 +88,66 @@
             <p><?= $site->no_telp?></p> 
 
             <h6>Sosial Media</h6>
-            <!-- link -->
-            <div>
-              <a href="<?= $site->fb?>" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-facebook-f"></i></button>
-              </a>
-              <!-- <a href="" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-twitter"></i></button>
-              </a> -->
-              <a href="<?= $site->ig?>" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-instagram"></i></button>
-              </a>
-              <!-- <a href="" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-linkedin-in"></i></button>
-              </a> -->
-          </div>
-          <!-- end link -->
+              <!-- link -->
+              <div>
+                <a href="<?= $site->fb?>" style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fab fa-fw fa-facebook-f"></i></button>
+                </a>
+                <!-- <a href="" style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fab fa-fw fa-twitter"></i></button>
+                </a> -->
+                <a href="<?= $site->ig?>" style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fab fa-fw fa-instagram"></i></button>
+                </a>
+                <!-- <a href="" style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fab fa-fw fa-linkedin-in"></i></button>
+                </a> -->
+              </div>
+              <!-- end link -->
           
           </div>
           <!--Grid column-->
+
+           <!--Grid column-->
+           <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="mb-5">Halaman</h5>
+
+            <h6>
+              <a href="" class="nav-link text-white">Home</a>
+            </h6>
+            <h6>
+              <a href="" class="nav-link text-white">Katalog Spesies</a>
+            </h6>
+            <h6>
+              <a href="" class="nav-link text-white">Berita</a>
+            </h6>
+            <h6>
+              <a href="" class="nav-link text-white">Profil</a>
+            </h6>
+            <h6>
+              <a href="" class="nav-link text-white">Hubungi Kami</a>
+            </h6>
+            
+            
+          </div>
+          <!--Grid column-->
+
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-4 mb-md-0 small-devices">
+            <h5 class="text-uppercase">Lokasi</h5>
+    
+            <div class="card text-light text-center" style="max-width: 22rem;" >
+              <div class="card-body text-light" >
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.029317965409!2d106.94505033556736!3d-6.919588063329196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x261f558445241e0c!2sUniversitas%20Muhammadiyah%20Sukabumi!5e0!3m2!1sid!2sid!4v1616902829355!5m2!1sid!2sid"
+                      width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+
         </div>
         <!--Grid row-->
       </div>

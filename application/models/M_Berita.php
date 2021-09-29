@@ -97,9 +97,9 @@ class M_Berita extends CI_Model{
    public function getLimitThree(){
       $this->db->select('*');
       $this->db->from('berita');
-      $this->db->limit(3, 'ASC');
+      $this->db->limit(3, 'DESC');
       $query = $this->db->get();
-      return $query;
+      return $query->result();
    }
 
    public function getBerita($perHalaman,$dataMulai) {
@@ -139,7 +139,7 @@ class M_Berita extends CI_Model{
    }
    
    //read
-	public function readBerita($slug_judul) {
+	public function bacaBerita($slug_judul) {
 		$this->db->select('berita.*, k_berita.kategori, auth.nama');
 		$this->db->from('berita');
 		// Join

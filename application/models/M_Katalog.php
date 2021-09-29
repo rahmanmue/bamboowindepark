@@ -26,9 +26,9 @@ class M_Katalog extends CI_Model{
    public function getLimitSix(){
       $this->db->select('*');
       $this->db->from('katalog');
-      $this->db->limit(6, 'ASC');
+      $this->db->limit(6, 'DESC');
       $query = $this->db->get();
-      return $query;
+      return $query->result();
    }
 
    public function list(){
@@ -60,6 +60,18 @@ class M_Katalog extends CI_Model{
 
     public function countAll(){
       return $this->db->get('katalog')->num_rows();
+   }
+
+   //read
+	public function bacaKatalog($slug_judul) {
+		$this->db->select('katalog.*, auth.nama');
+		$this->db->from('katalog');
+		// Join
+		$this->db->join('auth','auth.id_auth = katalog.id_auth','LEFT');
+		// End join
+		$this->db->where('slug_judul',$slug_judul);
+		$query = $this->db->get();
+		return $query->row();
    }
 
 
