@@ -23,6 +23,14 @@ class M_Katalog extends CI_Model{
       
    }
 
+   public function getLimitSix(){
+      $this->db->select('*');
+      $this->db->from('katalog');
+      $this->db->limit(6, 'ASC');
+      $query = $this->db->get();
+      return $query;
+   }
+
    public function list(){
       $this->db->select('*');
       $this->db->from('katalog');

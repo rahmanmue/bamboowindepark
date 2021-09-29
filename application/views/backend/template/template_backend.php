@@ -93,6 +93,13 @@
             </li>
 
             <li>
+               <a href="<?=base_url('list-banner');?>" class="<?= menuAktif('banner')?>">
+                  <i class="fas fa-flag"></i><span class="ml-3">BANNER</span>
+               </a>
+            </li>
+
+
+            <li>
                <a href="<?=base_url('konfigurasi-web');?>" class="<?=menuAktif('konfigurasi')?>">
                   <i class="fas fa-tools"></i><span class="ml-3">KONFIGURASI</span>
                </a>

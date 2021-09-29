@@ -94,6 +94,14 @@ class M_Berita extends CI_Model{
       return $this->db->get('berita')->num_rows();
    }
 
+   public function getLimitThree(){
+      $this->db->select('*');
+      $this->db->from('berita');
+      $this->db->limit(3, 'ASC');
+      $query = $this->db->get();
+      return $query;
+   }
+
    public function getBerita($perHalaman,$dataMulai) {
 		$this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');
 		$this->db->from('berita');
