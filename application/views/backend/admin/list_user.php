@@ -2,8 +2,8 @@
 <div class="container mt-5">
 <div id="border">
    
-   <?php if($this->session->has_userdata('alert') == 'alert alert-success') {?>
-      <div class="<?=$this->session->flashdata('alert')?> alert-dismissible fade show" role="alert">
+   <?php if($this->session->flashdata('alertAdmin') == 'alert alert-success') {?>
+      <div class="<?=$this->session->flashdata('alertAdmin')?> alert-dismissible fade show" role="alert">
       <?=$this->session->flashdata('pesan')?>
          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>

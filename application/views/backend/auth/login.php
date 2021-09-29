@@ -9,7 +9,7 @@
          </div>
          <div class="card-body">
             <?php
-               if($this->session->flashdata('pesan')){
+               if($this->session->flashdata('pesan') == 'Email atau Password yang anda masukan salah'){
                   $alert = $this->session->flashdata('alert');
                   echo 
                   '<div class="alert '.$alert.' alert-dismissible fade show" role="alert">'. 

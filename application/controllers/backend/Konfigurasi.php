@@ -37,7 +37,7 @@ class Konfigurasi extends CI_Controller {
 
         $this->M_Konfigurasi->edit($data);
         $pesan = [
-         'alert'=>'alert alert-success',
+         'alertKonfigurasi'=>'alert alert-success',
          'pesan'=>'Data Berhasil di ubah'
       ];
       $this->session->set_flashdata($pesan);

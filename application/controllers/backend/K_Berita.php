@@ -47,7 +47,7 @@ class K_Berita extends CI_Controller {
      
         $this->M_Kberita->tambahKategori($dataKategori);
                 $pesan = [
-                'alert'=>'alert alert-success',
+                'alertKategori'=>'alert alert-success',
                 'pesan'=>'Data Berhasil ditambahkan'
                 ];
             $this->session->set_flashdata($pesan);
@@ -80,7 +80,7 @@ class K_Berita extends CI_Controller {
 
         $this->M_Kberita->editKategori($dataKategori);
          $pesan = [
-            'alert'=>'alert alert-success',
+            'alertKategori'=>'alert alert-success',
             'pesan'=>'Data Berhasil di ubah'
          ];
          $this->session->set_flashdata($pesan);
@@ -91,7 +91,7 @@ class K_Berita extends CI_Controller {
    public function hapus(){
       $this->M_Kberita->hapusKategori($this->input->post('id'));
       $pesan = [
-         'alert'=>'alert alert-success',
+         'alertKategori'=>'alert alert-success',
          'pesan'=>'Data Berhasil di hapus'
       ];
       $this->session->set_flashdata($pesan);

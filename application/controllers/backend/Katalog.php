@@ -58,7 +58,7 @@ class Katalog extends CI_Controller {
      
          $this->M_Katalog->tambah($dataArtikel);
             $pesan = [
-               'alert'=>'alert alert-success',
+               'alertKatalog'=>'alert alert-success',
                'pesan'=>'Data Berhasil ditambahkan'
             ];
             $this->session->set_flashdata($pesan);
@@ -104,7 +104,7 @@ class Katalog extends CI_Controller {
 
         $this->M_Katalog->edit($dataArtikel);
             $pesan = [
-                'alert'=>'alert alert-success',
+                'alertKatalog'=>'alert alert-success',
                 'pesan'=>'Data Berhasil di ubah'
             ];
             $this->session->set_flashdata($pesan);
@@ -115,7 +115,7 @@ class Katalog extends CI_Controller {
    public function hapus(){
       $this->M_Katalog->hapus($this->input->post('id'));
       $pesan = [
-         'alert'=>'alert alert-success',
+         'alertKatalog'=>'alert alert-success',
          'pesan'=>'Data Berhasil dihapus'
       ];
       $this->session->set_flashdata($pesan);

@@ -45,7 +45,7 @@ class Banner extends CI_Controller {
 
        $this->M_Banner->tambahBanner($data);
        $pesan = [
-          'alert'=>'alert alert-success',
+          'alertBanner'=>'alert alert-success',
           'pesan'=>'Data Berhasil ditambahkan'
        ];
        $this->session->set_flashdata($pesan);
@@ -77,7 +77,7 @@ class Banner extends CI_Controller {
        ];
        $this->M_Banner->editBanner($data);
        $pesan = [
-          'alert'=>'alert alert-success',
+          'alertBanner'=>'alert alert-success',
           'pesan'=>'Data Berhasil di ubah'
        ];
        $this->session->set_flashdata($pesan);
@@ -89,7 +89,7 @@ class Banner extends CI_Controller {
  public function hapus(){
     $this->M_Banner->hapusBanner($this->input->post('id'));
     $pesan = [
-       'alert'=>'alert alert-danger',
+       'alertBanner'=>'alert alert-danger',
        'pesan'=>'Data Berhasil dihapus'
     ];
     $this->session->set_flashdata($pesan);

@@ -56,7 +56,7 @@ class Berita extends CI_Controller {
      
          $this->M_Berita->tambah($dataArtikel);
             $pesan = [
-               'alert'=>'alert alert-success',
+               'alertBerita'=>'alert alert-success',
                'pesan'=>'Data Berhasil ditambahkan'
             ];
             $this->session->set_flashdata($pesan);
@@ -98,7 +98,7 @@ class Berita extends CI_Controller {
                      ];
             $this->M_Berita->edit($dataArtikel);
                $pesan = [
-                  'alert'=>'alert alert-success',
+                  'alertBerita'=>'alert alert-success',
                   'pesan'=>'Data Berhasil di ubah'
                ];
                $this->session->set_flashdata($pesan);
@@ -109,7 +109,7 @@ class Berita extends CI_Controller {
    public function hapus(){
       $this->M_Berita->hapus($this->input->post('id'));
       $pesan = [
-         'alert'=>'alert alert-success',
+         'alertBerita'=>'alert alert-success',
          'pesan'=>'Data Berhasil dihapus'
       ];
       $this->session->set_flashdata($pesan);

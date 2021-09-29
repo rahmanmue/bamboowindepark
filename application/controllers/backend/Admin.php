@@ -65,7 +65,7 @@ class Admin extends CI_Controller {
          }   
          $this->M_Auth->edit($dataUser);
          $datapesan =  [ 
-            'alert'=> 'alert alert-success',
+            'alertAdmin'=> 'alert alert-success',
             'pesan' => 'Akun anda berhasil di Edit' 
          ];
          $this->session->set_flashdata($datapesan);
@@ -78,7 +78,7 @@ class Admin extends CI_Controller {
 
       $this->M_Auth->hapus($this->input->post('id'));
       $datapesan =  [ 
-         'alert'=> 'alert alert-success',
+         'alertAdmin'=> 'alert alert-success',
          'pesan' => 'Akun berhasil di hapus' 
       ];
       $this->session->set_flashdata($datapesan);
