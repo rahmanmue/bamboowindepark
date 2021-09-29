@@ -5,6 +5,10 @@ body{
     background-color: #f1ffef;
 }
 
+.disabled{
+    pointer-events: none;
+}
+
  /* Dari */
  
 .tengah{

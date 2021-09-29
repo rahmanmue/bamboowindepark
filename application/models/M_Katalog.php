@@ -58,6 +58,10 @@ class M_Katalog extends CI_Model{
         $this->db->delete('katalog');
     }
 
+    public function countAll(){
+      return $this->db->get('katalog')->num_rows();
+   }
+
 
 //    public function list(){
 //       $this->db->select('berita.*, k_berita.kategori');
@@ -103,9 +107,6 @@ class M_Katalog extends CI_Model{
 		return $query->result();
    }
 
-   public function countAll(){
-      return $this->db->get('berita')->num_rows();
-   }
 
    public function getBerita($perHalaman,$dataMulai) {
 		$this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');

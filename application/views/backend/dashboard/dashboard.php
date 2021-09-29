@@ -12,7 +12,7 @@
                     <i class="fa fa-user"></i>
                 </span>
                 <div class="text-box" >
-                    <a href="<?=base_url('administrasi')?>">
+                    <a href="<?=base_url('list-admin')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
                         <p>User</p>
                         <span class="badge badge-info"><?= $user?></span>
                     </a>
@@ -26,7 +26,7 @@
                     <i class="fa fa-tags 2x"></i>
                 </span>
                 <div class="text-box" >
-                <a href="<?=base_url('kategori')?>">
+                <a href="<?=base_url('kategori-berita')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
                     <p>Kategori Berita</p>
                     <span class="badge badge-info"><?= $kategori?></span></a>
                 </div>
@@ -44,7 +44,7 @@
             <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-purple set-icon"><i class="fa fa-newspaper 2x"></i></span>
                 <div class="text-box" >
-                    <a href="<?=base_url('visitor')?>">
+                    <a href="<?=base_url('list-berita')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
                             <p>Berita</p>
                             <span class="badge badge-info"><?= $artikel?></span>
                     </a>
@@ -57,20 +57,39 @@
  
         <div class="col-md-6 col-sm-6">           
             <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-blue set-icon">
-                    <i class="fa fa-tags 2x"></i>
+                <span class="icon-box bg-info set-icon">
+                    <i class="fas fa-list 2x text-white"></i>
                 </span>
                 <div class="text-box" >
-                <a href="<?=base_url('kategori')?>">
+                <a href="<?=base_url('list-katalog')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
                     <p>Katalog Spesies</p>
-                    <span class="badge badge-info"><?= $kategori?></span></a>
+                    <span class="badge badge-info"><?= $katalog?></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 mt-3">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-warning set-icon">
+                    <i class="fas fa-flag 2x text-white"></i>
+                </span>
+                <div class="text-box" >
+                <a href="<?=base_url('list-banner')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
+                    <p>Banner</p>
+                    <span class="badge badge-info"><?= $banner?></span></a>
                 </div>
             </div>
         </div>
 
     </div>
 
+
+    
+    
+
 </div>
+
+
 
 
 

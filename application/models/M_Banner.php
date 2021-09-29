@@ -50,4 +50,8 @@ class M_Banner extends CI_Model{
       $this->db->delete('banner');
    }
 
+   public function countAll(){
+      return $this->db->get('banner')->num_rows();
+   }
+
 }
