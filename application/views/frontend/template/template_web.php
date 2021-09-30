@@ -29,7 +29,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item <?= $this->uri->segment('1') == 'home' ? 'active': ''?>">
+                    <li class="nav-item <?= $this->uri->segment('1') == '' ? 'active': ''?>">
                       <a class="nav-link" href="<?=base_url()?>"
                         >HOME <span class="sr-only">(current)</span></a
                       >

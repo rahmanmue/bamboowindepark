@@ -39,7 +39,7 @@ class M_Kberita extends CI_Model{
     }
     
     
-    public function readKategori($slug_kategori) {
+    public function bacaKategori($slug_kategori) {
         return $this->db->order_by('urutan','ASC')->get_where('k_berita',['slug_kategori'=>$slug_kategori])->row();
     }
  

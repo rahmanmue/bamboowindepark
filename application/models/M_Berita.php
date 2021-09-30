@@ -137,7 +137,7 @@ class M_Berita extends CI_Model{
    }
 
     //kategori
-	public function kategori($id_kategori,$perHalaman,$dataMulai) {
+	public function kategori($id_kategori) {
 		$this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');
 		$this->db->from('berita');
 		// Join
@@ -146,7 +146,7 @@ class M_Berita extends CI_Model{
 		// End join
         $this->db->where('berita.id_kategori',$id_kategori);
         $this->db->order_by('id_berita','DESC');
-        $this->db->limit($perHalaman,$dataMulai);
+      //   $this->db->limit($perHalaman,$dataMulai);
 		$query = $this->db->get();
 		return $query->result();
    }

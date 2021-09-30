@@ -62,10 +62,11 @@ class M_Katalog extends CI_Model{
       return $this->db->get('katalog')->num_rows();
    }
 
-   public function getKatalogPublish(){
+   public function getKatalogPublish($perHalaman=false, $dataMulai=false){
       $this->db->select('*');
       $this->db->from('katalog');
       $this->db->where('katalog.status', 'publish');
+      $this->db->limit($perHalaman,$dataMulai);
       $query = $this->db->get();
       return $query->result();
    }

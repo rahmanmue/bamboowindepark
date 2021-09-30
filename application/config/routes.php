@@ -86,11 +86,14 @@ $route['list-banner/tambah'] = 'backend/banner/tambah';
 $route['list-banner/edit'] = 'backend/banner/edit';
 $route['list-banner/hapus'] = 'backend/banner/hapus';
 
-$route['berita/(:any)'] = 'frontend/wikiplant/berita/$1';
-$route['katalog/(:any)'] = 'frontend/wikiplant/katalog/$1';
+$route['berita/(:any)'] = 'wikiplant/berita/$1';
+$route['katalog/(:any)'] = 'wikiplant/katalog/$1';
 
-$route['berita'] = 'wikiplant/berita_list';
-$route['katalog'] = 'wikiplant/katalog_list';
+$route['berita'] = 'wikiplant/berita_list_home';
+$route['berita/kategori/(:any)'] = 'wikiplant/berita_list_home/$1';
+$route['katalog'] = 'wikiplant/katalog_list_home';
+$route['page/index'] = 'wikiplant/katalog_list_home';
+$route['page/index/(:num)'] = 'wikiplant/katalog_list_home/index/$1';
 
 
 
