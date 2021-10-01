@@ -76,7 +76,7 @@ $route['list-berita/hapus'] = 'backend/berita/hapus';
 $route['dashboard-web'] = 'backend/dashboard/index';
 $route['konfigurasi-web'] = 'backend/konfigurasi';
 
-$route['list-berita'] = 'backend/katalog/index';
+$route['list-katalog'] = 'backend/katalog/index';
 $route['list-katalog/tambah'] = 'backend/katalog/tambah';
 $route['list-katalog/edit'] = 'backend/katalog/edit';
 $route['list-katalog/hapus'] = 'backend/katalog/hapus';

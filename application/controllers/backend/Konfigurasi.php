@@ -27,6 +27,7 @@ class Konfigurasi extends CI_Controller {
             "deskripsi_web"=>$this->input->post('deskripsi_web',true),
             "email"=>$this->input->post('email',true),
             "alamat"=>$this->input->post('alamat',true),
+            "google_maps"=>$this->input->post('google_maps',true),
             "no_telp"=>$this->input->post('no_telp',true),
             "fb"=>$this->input->post('fb',true),
             "ig"=>$this->input->post('ig',true),

@@ -8,6 +8,7 @@ class Katalog extends CI_Controller {
       parent::__construct();		
       login();
       $this->load->Model(['M_Katalog','M_Auth']);
+      $this->load->library('Ciqrcode');
    }
 
    public function index(){
@@ -15,7 +16,7 @@ class Katalog extends CI_Controller {
         $katalog = $this->M_Katalog->list();
       
         $data=[
-            'title'=>'List Berita',
+            'title'=>'List Katalog',
             'isi'=>'backend/katalog/list_katalog',
             'listKatalog'=>$katalog
         ];
@@ -48,9 +49,9 @@ class Katalog extends CI_Controller {
             'id_auth'=>$this->session->userdata('user_id'),
             'penulis'=>$this->M_Auth->detail($this->session->userdata('user_id'))->nama,
             'status'=>$this->input->post('status'),
-            'klasifikasi'=>$this->input->post('klasifikasi'),
-            'deskripsi'=>$this->input->post('deskripsi'),
-            'manfaat'=>$this->input->post('manfaat'),
+            // 'klasifikasi'=>$this->input->post('klasifikasi'),
+            // 'deskripsi'=>$this->input->post('deskripsi'),
+            'isi_katalog'=>$this->input->post('isi_katalog'),
             'tanggal_post'=>date('Y-m-d H:i:s'),
             'gambar'=> $this->M_Katalog->upload()
          ];
@@ -95,9 +96,9 @@ class Katalog extends CI_Controller {
                 'id_auth'=>$this->session->userdata('user_id'),
                 'penulis'=>$this->M_Auth->detail($this->session->userdata('user_id'))->nama,
                 'status'=>$this->input->post('status'),
-                'klasifikasi'=>$this->input->post('klasifikasi'),
-                'deskripsi'=>$this->input->post('deskripsi'),
-                'manfaat'=>$this->input->post('manfaat'),
+               //  'klasifikasi'=>$this->input->post('klasifikasi'),
+               //  'deskripsi'=>$this->input->post('deskripsi'),
+                'isi_katalog'=>$this->input->post('isi_katalog'),
                 'tanggal_post'=>date('Y-m-d H:i:s'),
                 'gambar'=> $this->M_Katalog->upload()
             ];
@@ -121,9 +122,6 @@ class Katalog extends CI_Controller {
       $this->session->set_flashdata($pesan);
       redirect('list-katalog');
    }
-
-   
-
    
 
 }

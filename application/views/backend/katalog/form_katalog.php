@@ -71,21 +71,14 @@
 
 
     <div class="col-md-12 mt-3">	
-         <div class="form-group form-group-lg">
-            <label class="font-weight-bold">Klasifikasi</label>
-            <input type="text" name="klasifikasi" class="form-control" value="<?= set_value('klasifikasi', $katalog->klasifikasi ??'');?>">      
-         </div>
+        
       
         <div class="form-group">
-            <label class="font-weight-bold">Deskripsi</label>
-            <textarea name="deskripsi" placeholder="Deskripsi" id="editor"  class="form-control"><?=set_value('deskripsi',$katalog->deskripsi ??'')?></textarea>
+            <label class="font-weight-bold">Isi Katalog</label>
+            <textarea name="isi_katalog" placeholder="Isi Katalog" id="editor" class="form-control"><?=set_value('isi_katalog',$katalog->isi_katalog ??'')?></textarea>
 	    </div>
 
-        <div class="form-group">
-            <label class="font-weight-bold">Manfaat</label>
-            <textarea name="manfaat" placeholder="Manfaat" id="editor2"  class="form-control"><?=set_value('manfaat',$katalog->manfaat ??'')?></textarea>
-	    </div>
-		
+       
 
 
 

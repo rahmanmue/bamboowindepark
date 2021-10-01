@@ -52,6 +52,7 @@ class M_Katalog extends CI_Model{
 
     public function hapus($id){
         $filename=$this->detail($id);
+        unlink(FCPATH.'assets/uploads/qrcode/'.$filename->slug_judul);
         unlink(FCPATH.'assets/uploads/katalog/'. $filename->gambar);
 
         $this->db->where(['id_katalog'=>$id]);

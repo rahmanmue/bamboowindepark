@@ -22,7 +22,7 @@
       <tr class="font-weight-bold">
          <td>No</td>
          <td>Gambar</td>
-         <td>Judul</td>
+         <td>Judul Berita</td>
          <td>Status</td>
          <td>Kategori</td>
          <td>Penulis</td>
@@ -42,12 +42,17 @@
          <td><?=$berita->kategori?></td>
          <td><?=$berita->penulis?></td>
          <td>
-         <div class="text-center" >
-            <form action="<?=base_url('list-berita/edit')?>" method="post" style="display: inline-block;">
+         <div class="text-center d-flex" >
+            <form action="<?=base_url('list-berita/edit')?>" method="post">
                <input type="hidden" name="id" value="<?=$berita->id_berita?>">
                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
             </form>
-            <form action="<?=base_url('list-berita/hapus')?>" method="post" style="display: inline-block;">
+            <div class="btn btn-warning btn-sm mx-2" >
+               <a href="<?=base_url('berita/'.$berita->slug_judul)?>" target="_blank">
+               <i class="fas fa-eye text-white"></i>
+               </a>
+            </div>
+            <form action="<?=base_url('list-berita/hapus')?>" method="post">
                <input type="hidden" name="id" value="<?=$berita->id_berita?>">
                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin Menghapus ini ?')"><i class="fa fa-trash"></i></button>
             </form>

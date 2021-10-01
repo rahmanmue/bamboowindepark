@@ -70,7 +70,7 @@
             <h4>Google Maps</h4><hr>
             <div class="form-group row">
                <label class="col-sm-2">Link Google Maps</label>
-               <textarea name="google_maps" rows="5" class="form-control col-sm-10" placeholder="salin link google maps disini"><?=$konfigurasi->google_maps?></textarea>
+               <textarea name="google_maps" rows="5" class="form-control col-sm-10" placeholder="salin link google maps disini cth : http://www.google.com/maps/ ...."><?=$konfigurasi->google_maps?></textarea>
             </div>
             
             <div class="form-group map row">

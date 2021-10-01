@@ -88,7 +88,7 @@
 
 	<div class="col-md-12 mt-3">		
 		<div class="form-group">
-         <label class="font-weight-bold">Content</label>
+         <label class="font-weight-bold">Isi Berita</label>
          <textarea name="content" rows ="300" placeholder="Content" id="editor2"  class="form-control"><?=set_value('content',$berita->content ??'')?></textarea>
 		</div>
 		

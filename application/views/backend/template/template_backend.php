@@ -157,14 +157,14 @@
     <script>
        //  CKEDITOR
        var editor = CKEDITOR.replace('editor',{
-          height : 500
+          height : 1200
        });
        CKFinder.setupCKEditor(editor);
 
-       var editor2 = CKEDITOR.replace('editor2', {
-          height: 800
-       });
-       CKFinder.setupCKEditor(editor2);
+      //  var editor2 = CKEDITOR.replace('editor2', {
+      //     height: 800
+      //  });
+      //  CKFinder.setupCKEditor(editor2);
 
 
       //FILE BROWSER 

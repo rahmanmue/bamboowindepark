@@ -24,7 +24,7 @@
             <div id="main">
               
               <!-- Accordion 1 -->
-                <div class="accordion" id="faq">
+                <!-- <div class="accordion" id="faq">
                   <div class="card">
                     <div class="card-header" id="faqhead1">
                         <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq1"
@@ -37,13 +37,13 @@
                             <?=$katalog->klasifikasi?>
                         </div>
                     </div>
-                  </div>
+                  </div> -->
                    <!-- /Accordion 1 -->
 
 
                   <!-- Accordion 2 -->
 
-                  <div class="accordion" id="faq">
+                  <!-- <div class="accordion" id="faq">
                     <div class="card">
                       <div class="card-header" id="faqhead2">
                           <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
@@ -56,14 +56,14 @@
                             <?=$katalog->deskripsi?>
                           </div>
                       </div>
-                    </div>
+                    </div> -->
 
                   <!-- /Accordion 2 -->
 
 
                   <!-- Accordion3 -->
                     
-                  <div class="accordion" id="faq">
+                  <!-- <div class="accordion" id="faq">
                     <div class="card">
                       <div class="card-header" id="faqhead3">
                           <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
@@ -76,14 +76,18 @@
                             <?=$katalog->manfaat?>
                           </div>
                       </div>
-                    </div>
+                    </div> -->
                     
                   <!-- /Accordion 3 -->
-
+                <div class="p-3">
+                <?=$katalog->isi_katalog?>
+                </div>
 
 
                 
+                 
               </div>
+
   
             <!-- link -->
             <div class="text-right">
