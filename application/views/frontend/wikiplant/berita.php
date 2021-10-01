@@ -41,5 +41,8 @@
             <?php endforeach;?>
 
 
+            <div class="col-md-12">
+            <?= $this->pagination->create_links();?>
+          </div>
         </div>
     </div>

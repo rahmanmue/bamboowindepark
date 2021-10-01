@@ -113,19 +113,19 @@
             <h5 class="mb-5">Halaman</h5>
 
             <h6>
-              <a href="" class="nav-link text-white">Home</a>
+              <a href="<?=base_url()?>" class="nav-link text-white">Home</a>
             </h6>
             <h6>
-              <a href="" class="nav-link text-white">Katalog Spesies</a>
+              <a href="<?=base_url('katalog')?>" class="nav-link text-white">Katalog Spesies</a>
             </h6>
             <h6>
-              <a href="" class="nav-link text-white">Berita</a>
+              <a href="<?=base_url('berita')?>" class="nav-link text-white">Berita</a>
             </h6>
             <h6>
-              <a href="" class="nav-link text-white">Profil</a>
+              <a href="<?=base_url('profil')?>" class="nav-link text-white">Profil</a>
             </h6>
             <h6>
-              <a href="" class="nav-link text-white">Hubungi Kami</a>
+              <a href="<?=base_url('hubungi')?>" class="nav-link text-white">Hubungi Kami</a>
             </h6>
             
             
@@ -140,7 +140,7 @@
             <div class="card text-light text-center" style="max-width: 22rem;" >
               <div class="card-body text-light" >
                   <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.029317965409!2d106.94505033556736!3d-6.919588063329196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x261f558445241e0c!2sUniversitas%20Muhammadiyah%20Sukabumi!5e0!3m2!1sid!2sid!4v1616902829355!5m2!1sid!2sid"
+                      src="<?=$site->google_maps?>"
                       width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>

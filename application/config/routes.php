@@ -76,7 +76,7 @@ $route['list-berita/hapus'] = 'backend/berita/hapus';
 $route['dashboard-web'] = 'backend/dashboard/index';
 $route['konfigurasi-web'] = 'backend/konfigurasi';
 
-$route['list-katalog'] = 'backend/katalog/index';
+$route['list-berita'] = 'backend/katalog/index';
 $route['list-katalog/tambah'] = 'backend/katalog/tambah';
 $route['list-katalog/edit'] = 'backend/katalog/edit';
 $route['list-katalog/hapus'] = 'backend/katalog/hapus';
@@ -90,10 +90,22 @@ $route['berita/(:any)'] = 'wikiplant/berita/$1';
 $route['katalog/(:any)'] = 'wikiplant/katalog/$1';
 
 $route['berita'] = 'wikiplant/berita_list_home';
-$route['berita/kategori/(:any)'] = 'wikiplant/berita_list_home/$1';
 $route['katalog'] = 'wikiplant/katalog_list_home';
-$route['page/index'] = 'wikiplant/katalog_list_home';
-$route['page/index/(:num)'] = 'wikiplant/katalog_list_home/index/$1';
+
+$route['page-katalog/index'] = 'wikiplant/katalog_list_home';
+$route['page-katalog/index/(:num)'] = 'wikiplant/katalog_list_home/index/$1';
+
+$route['page-berita/index'] = 'wikiplant/berita_list_home';
+$route['page-berita/index/(:num)'] = 'wikiplant/berita_list_home/$1';
+
+
+$route['page-kategori-berita/(:any)'] = 'wikiplant/page_kategori_berita/$1';
+$route['page-kategori-berita/(:any)/(:num)'] = 'wikiplant/page_kategori_berita/$1/$1';
+
+
+
+
+
 
 
 

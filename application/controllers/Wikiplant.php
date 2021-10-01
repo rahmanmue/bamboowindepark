@@ -56,17 +56,19 @@ class Wikiplant extends CI_Controller {
 		$this->load->view($template,$data);  
     }
 
-    public function berita_list_home($slug_kategori = false){
+    public function berita_list_home(){
         $template = 'frontend/template/template_web';
         $site	= $this->M_Konfigurasi->get();
-
-        if($slug_kategori == true){
-            $kategori = $this->M_Kberita->bacaKategori($slug_kategori);
-            $listBerita = $this->M_Berita->kategori($kategori->id_kategori);
-        }else{
-            $listBerita = $this->M_Berita->getBeritaPublish();
-        }
-
+      
+        // $config['base_url'] = 'http://localhost/wikiplant/page-berita/index/';
+        $config['base_url'] = base_url('page-berita/index/');
+        $mulai = $this->uri->segment(3);
+		$config['total_rows'] = $this->M_Berita->countAll();
+		$config['per_page'] = 6;
+		$this->pagination->initialize($config);
+       
+        $listBerita = $this->M_Berita->getBeritaPublish($config['per_page'],$mulai);
+        
 		$data	= [
             'title'	=> 'Berita',
             'site'=>$site,       
@@ -76,21 +78,43 @@ class Wikiplant extends CI_Controller {
 		$this->load->view($template,$data); 
     }
 
-    
+    public function page_kategori_berita($slug_kategori) {
+        $template   = 'frontend/template/template_web';
+		$site		= $this->M_Konfigurasi->get();
+		$kategori	= $this->M_Kberita->bacaKategori($slug_kategori);
+
+		// $config['base_url'] = 'http://localhost/wikiplant/page-kategori-berita/'.$slug_kategori.'/';
+		$config['base_url'] = base_url('page-kategori-berita/'.$slug_kategori.'/');
+		$config['total_rows'] = $this->M_Berita->countkategori($kategori->id_kategori);
+		$config['per_page'] = 6;
+		$mulai =$this->uri->segment(3);
+		$this->pagination->initialize($config);
+
+      	$listBerita = $this->M_Berita->kategori($kategori->id_kategori,$config['per_page'],$mulai);
+    	
+        $data	= [
+            'title'	=> 'Berita',
+            'site'=>$site,       
+            'listBerita'=> $listBerita,
+            'isi'=> 'frontend/wikiplant/berita'
+        ];
+
+		$this->load->view($template,$data); 
+	}
 
 
     public function katalog_list_home(){
         $template = 'frontend/template/template_web';
         $site	= $this->M_Konfigurasi->get();
         
-        $config['base_url'] = 'http://localhost/wikiplant/page/index/';
+        // $config['base_url'] = 'http://localhost/wikiplant/page-katalog/index/';
+        $config['base_url'] = base_url('page-katalog/index/');
 		$config['total_rows'] = $this->M_Katalog->countAll();
 		$config['per_page'] = 6;
 		$mulai = $this->uri->segment(3);
 		$this->pagination->initialize($config);
 
         $listKatalog = $this->M_Katalog->getKatalogPublish($config['per_page'],$mulai);
-
 
 		$data	= [
             'title'	=> 'Katalog',

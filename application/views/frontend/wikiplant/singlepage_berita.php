@@ -44,7 +44,11 @@
             </div>
             <ul class="list-group list-group-flush">
             <?php foreach($listKategori as $kategori):?>
-              <li class="list-group-item"><?=$kategori->kategori?></li>
+              <li class="list-group-item">
+                <a href="<?=base_url('page-kategori-berita/'.$kategori->slug_kategori)?>" style="text-decoration:none;">
+                  <?=$kategori->kategori?>
+                </a>
+              </li>
             <?php endforeach;?>
             </ul>
           </div>
