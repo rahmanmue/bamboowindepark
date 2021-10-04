@@ -1,6 +1,6 @@
 <div class="container mt-5">
 
-      <div class="card">
+      <div class="card" style="margin:80px 0 80px 0;">
       <h5 class="card-header text-center text-uppercase"><?=$title?></h5>
             <div class="card-body">
              <form action="<?=$action;?>" method="post" enctype="multipart/form-data">
@@ -12,24 +12,31 @@
 
                <?php if($title == 'Edit Banner') {
                echo "
-               <div class='row mb-2'>
-               <img src='".base_url('assets/uploads/banner/'.$banner->gambar)."' width='100px' class='col-md-4 ml-3'>
-                   <div class='form-group col-md-7 ml-3'>
-                   <label class='font-weight-bold'>Upload Gambar</label><small> (Ukuran dibawah 1mb) </small>
-                   <div class='custom-file'>
-                     <input type='file' class='custom-file-input' id='customFile' name='gambar'>
-                     <label class='custom-file-label' for='customFile'>Rekomendasi ukuran gambar (1403 x 500)</label>
+              
+                  <div class='col-md-4'>
+                     <img src='".base_url('assets/uploads/banner/'.$banner->gambar)."' class='img-fluid'>
                   </div>
-                     <small class='text-info'> Biarkan Jika tidak Ada & Jika tidak sesuai dengan format atau Ukuran Gambar maka gambar di set ke sebelumnya </small>                  
+                   
+                  <div class='col-md-8'>
+                     <div class='form-group'>
+                        <label class='font-weight-bold'>Upload Gambar</label><small> (Ukuran dibawah 1mb) </small>
+                        <div class='custom-file'>
+                           <input type='file' class='custom-file-input' id='customFile' name='gambar'>
+                           <label class='custom-file-label' for='customFile'>Rekomendasi ukuran gambar (1403 x 500)</label>
+                        </div>
+                           <small class='text-info'> Biarkan Jika tidak Ada & Jika tidak sesuai dengan format atau Ukuran Gambar maka gambar di set ke sebelumnya </small>                  
+                     </div>
                   </div>
-               </div>";
+               ";
             }else{
               echo
-              " <div class='form-group col-md-12'>
+              "<div class='col-md-12'>
+              <div class='form-group'>
                <label for='keterangan'class='font-weight-bold'>Upload Gambar</label><small> (Ukuran dibawah 1mb) </small>
                <div class='custom-file'>
                   <input type='file' class='custom-file-input' id='customFile' name='gambar' required>
                   <label class='custom-file-label' for='customFile'>Rekomendasi ukuran gambar (1403 x 500)</label>
+               </div>
                </div>
                </div>";
             }
@@ -56,7 +63,7 @@
 
                
               
-              <input type="hidden" name="gambarLama" value="<?=$banner->gambar ??'kosong'?>">
+               <input type="hidden" name="gambarLama" value="<?=$banner->gambar ??''?>">
                <input type="hidden" name='id' value="<?= $banner->id_banner ?? '';?>"> 
                <div class="form-group col-md-12">
                   <button type="reset" name="reset" class="btn btn-danger float-right ">Reset</button>

@@ -1,5 +1,6 @@
 <?php
     $userAktif= $this->M_Auth->detail($this->session->userdata('user_id'));
+    $site = $this->M_Konfigurasi->get();
 ?>
 
 
@@ -9,6 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="<?=base_url('assets/uploads/logo/'.$site->icon) ?>" rel="shortcut icon">
     <title><?=$title?></title>
     <!-- <link href="" rel="shortcut icon"> -->
 

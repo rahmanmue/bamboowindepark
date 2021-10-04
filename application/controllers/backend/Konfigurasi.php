@@ -31,6 +31,8 @@ class Konfigurasi extends CI_Controller {
             "no_telp"=>$this->input->post('no_telp',true),
             "fb"=>$this->input->post('fb',true),
             "ig"=>$this->input->post('ig',true),
+            "twitter"=>$this->input->post('twitter',true),
+            "yt"=>$this->input->post('yt',true),
             "tanggal"=>date('Y-m-d H:i:s'),
             "icon"=>$this->M_Konfigurasi->upload(),
             "id_auth"=>$this->session->userdata('user_id')

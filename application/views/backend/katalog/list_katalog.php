@@ -1,5 +1,5 @@
 <div class="container mt-5">
-   <div id="border" class="card">
+   <div class="card p-4" style="margin-top:100px;">
 
   <?php if($this->session->flashdata('alertKatalog') == 'alert alert-success') :?>
    <div class="<?=$this->session->flashdata('alertKatalog')?> alert-dismissible fade show" role="alert">

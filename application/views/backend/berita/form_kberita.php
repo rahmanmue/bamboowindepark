@@ -1,6 +1,6 @@
 <div class="container mt-5">
 
-      <div class="card">
+      <div class="card" style="margin:80px 0 80px 0;">
       <h5 class="card-header text-center text-uppercase"><?=$title?></h5>
             <div class="card-body">
              <form action="<?=$action;?>" method="post" enctype="multipart/form-data">

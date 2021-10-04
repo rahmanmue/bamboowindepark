@@ -11,12 +11,16 @@ class M_Berita extends CI_Model{
 
    public function upload(){
       $config['upload_path']='./assets/uploads/cover/';
-      $config['allowed_types']='gif|jpg|png';
+      $config['allowed_types']='gif|jpg|png|jpeg';
       $config['max_size']='2048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('gambar')){
-            unlink(FCPATH.'assets/uploads/cover/'.$this->input->post('gambarLama'));
-            return $this->upload->data('file_name');  
+            if($this->input->post('gambarLama') == ''){
+               return $this->upload->data('file_name');
+            }else{
+               unlink(FCPATH.'assets/uploads/cover/'.$this->input->post('gambarLama'));
+               return $this->upload->data('file_name');  
+            }
          }else{
             return $this->input->post('gambarLama');
          }

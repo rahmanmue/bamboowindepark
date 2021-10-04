@@ -10,12 +10,16 @@ class M_Banner extends CI_Model{
 // BANNER
    public function uploadBanner(){
       $config['upload_path']='./assets/uploads/banner/';
-      $config['allowed_types']='gif|jpg|png';
+      $config['allowed_types']='gif|jpg|png|jpeg';
       $config['max_size']='1048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('gambar')){
-            unlink(FCPATH.'assets/uploads/banner/'.$this->input->post('gambarLama'));
-            return $this->upload->data('file_name');  
+            if($this->input->post('gambarLama') == ''){
+               return $this->upload->data('file_name');  
+            }else{
+               unlink(FCPATH.'assets/uploads/banner/'.$this->input->post('gambarLama'));
+               return $this->upload->data('file_name');  
+            }
          }else{
             return $this->input->post('gambarLama');
          }

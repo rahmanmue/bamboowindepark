@@ -8,12 +8,20 @@
           <div>
             <h1 ><?=$title?></h1>
             <hr>
-            <p>
-                <i class="far fa-calendar-alt mr-2"></i> <?=$berita->tanggal_post?> 
-                <i class="fa fa-tags ml-4 mr-2"></i> <?=$berita->kategori?>
-                <i class="fas fa-pen ml-4 mr-2"></i> <?=$berita->penulis?>
+            <div class="d-flex justify-content-around">
             
-            </p>
+            <div class="">
+              <i class="fas fa-user"></i> <?=$berita->penulis?>
+            </div>
+            <div class="">
+              <i class="far fa-calendar-alt"></i> <?=date('d F Y', strtotime($berita->tanggal_post))?>  
+            </div>
+            <div class="">
+              <i class="fa fa-tags"></i> <?=$berita->kategori?> 
+            </div>
+            
+            </div>
+            
             <hr>
             <img src="<?=base_url('assets/uploads/cover/'.$berita->gambar)?>" class="img-fluid " width="760px" height="300px" alt="">
             <hr>
@@ -38,7 +46,7 @@
         <!-- /Content -->
 
         <div class="col-md-4">
-          <div class="card  mx-auto" style="width: 18rem;">
+          <div class="card mx-auto" >
             <div class="card-header bg-utama text-white">
               Kategori
             </div>

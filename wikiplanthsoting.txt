@@ -1,0 +1,7 @@
++R=6{lkjOv?M&cD)
+
+yang harus dibenarkan
+database dibenarkan 
+ckeditor base url
+helper penamaan filena kecil login_helper.php
+tampilan responsive untuk smartphone 

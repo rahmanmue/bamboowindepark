@@ -63,10 +63,10 @@ $route['list-admin'] = 'backend/admin/index';
 $route['list-admin/edit'] = 'backend/admin/edit';
 $route['list-admin/hapus'] = 'backend/admin/hapus';
 
-$route['kategori-berita'] = 'backend/k_berita/index';
-$route['kategori-berita/tambah'] = 'backend/k_berita/tambah';
-$route['kategori-berita/edit'] = 'backend/k_berita/edit';
-$route['kategori-berita/hapus'] = 'backend/k_berita/hapus';
+$route['kategori-berita'] = 'backend/K_Berita';
+$route['kategori-berita/tambah'] = 'backend/K_Berita/tambah';
+$route['kategori-berita/edit'] = 'backend/K_Berita/edit';
+$route['kategori-berita/hapus'] = 'backend/K_Berita/hapus';
 
 $route['list-berita'] = 'backend/berita/index';
 $route['list-berita/tambah'] = 'backend/berita/tambah';
@@ -101,6 +101,9 @@ $route['page-berita/index/(:num)'] = 'wikiplant/berita_list_home/$1';
 
 $route['page-kategori-berita/(:any)'] = 'wikiplant/page_kategori_berita/$1';
 $route['page-kategori-berita/(:any)/(:num)'] = 'wikiplant/page_kategori_berita/$1/$1';
+
+$route['profil'] = 'wikiplant/profil';
+$route['hubungi'] = 'wikiplant/hubungi';
 
 
 

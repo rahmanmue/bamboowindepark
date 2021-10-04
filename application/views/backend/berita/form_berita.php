@@ -1,7 +1,7 @@
 
 <div class="container mt-5">
 
-<div class="card">
+<div class="card" style="margin:80px 0 80px 0;">
 <h5 class="card-header text-center text-uppercase"><?=$title?></h5>
 <div class="card-body">
 <div id="border">
@@ -89,12 +89,12 @@
 	<div class="col-md-12 mt-3">		
 		<div class="form-group">
          <label class="font-weight-bold">Isi Berita</label>
-         <textarea name="content" rows ="300" placeholder="Content" id="editor2"  class="form-control"><?=set_value('content',$berita->content ??'')?></textarea>
+         <textarea name="content" rows ="300" placeholder="Content" id="editor"  class="form-control"><?=set_value('content',$berita->content ??'')?></textarea>
 		</div>
 		
 		<div class="form-group">
 
-      <input type='hidden' name ='gambarLama' value="<?=$berita->gambar??'default.png'?>">
+      <input type='hidden' name ='gambarLama' value="<?=$berita->gambar??''?>">
       <input type="hidden" name = "id" value="<?=$berita->id_berita??'';?>">
 		
 

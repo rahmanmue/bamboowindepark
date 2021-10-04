@@ -1,9 +1,9 @@
 <!-- Jumbotorn -->
 
-<div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/berita.jpg')?>); background-size:cover;">
-        <div class="container">
+<div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/berita.jpg')?>); background-size:cover; filter:brightness(85%);">
+        <div class="container text-white">
           <h1 class="display-4">Berita</h1>
-          <p class="lead">Ini Adalah Halaman List Semua Berita Yang Selalu Update Setiap Minggunya.</p>
+          <p class="lead">Semua Berita Yang Selalu Update Setiap Minggunya.</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
                     <img src="<?= base_url('assets/uploads/cover/'.$berita->gambar)?>" class="img-fluid" width="600px" height="400px">
                         <div class="card-body">
                             <h5 class="card-title poppins"><?=$berita->judul?></h5>
-                            <div class="card-text"><?= word_limiter($berita->content, 20);?></div>
+                            <div class="card-text"><?= character_limiter($berita->content, 50);?></div>
                             <a href="<?= base_url('berita/'.$berita->slug_judul)?>" class="btn btn-info r-20 robot" >Baca Selengkapnya</a>
                         </div>
                     </div>

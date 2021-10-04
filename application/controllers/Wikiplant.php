@@ -126,10 +126,28 @@ class Wikiplant extends CI_Controller {
     }
 
     public function profil(){
+        $template = 'frontend/template/template_web';
+        $site = $this->M_Konfigurasi->get();
+
+        $data=[
+			'title'=>'Profil',
+			'site'=>$site,
+			'isi'=>'frontend/wikiplant/profil'
+		];
+		$this->load->view($template,$data);
 
     }
 
     public function hubungi(){
+        $template = 'frontend/template/template_hubungi';
+        $site = $this->M_Konfigurasi->get();
+
+        $data=[
+			'title'=>'Hubungi',
+			'site'=>$site,
+			'isi'=>'frontend/wikiplant/hubungi'
+		];
+		$this->load->view($template,$data);
 
     }
 }

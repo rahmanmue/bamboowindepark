@@ -1,6 +1,6 @@
 <div class="container mt-5">    
 
-<form action="<?= $action ?>" method="post" id="border" enctype="multipart/form-data">
+<form action="<?= $action ?>" method="post" class="card p-4" style="margin:100px 0 80px 0;" enctype="multipart/form-data">
 
    <?php if($this->session->flashdata('alertKonfigurasi') == 'alert alert-success') :?>
       <div class="<?=$this->session->flashdata('alertKonfigurasi')?> alert-dismissible fade show" role="alert">
@@ -48,10 +48,20 @@
                <input type="url" name="fb" placeholder="http://facebook.com/namakamu" value="<?= $konfigurasi->fb?>" class="form-control col-sm-10">
             </div>
       
-         <div class="form-group row">
-            <label class="col-sm-2"><i class="fab fa-instagram"></i> Instagram </label>
-            <input type="url" name="ig" placeholder="http://instagram.com/namakamu" value="<?= $konfigurasi->ig?>" class="form-control col-sm-10">
-         </div>
+            <div class="form-group row">
+               <label class="col-sm-2"><i class="fab fa-instagram"></i> Instagram </label>
+               <input type="url" name="ig" placeholder="http://instagram.com/namakamu" value="<?= $konfigurasi->ig?>" class="form-control col-sm-10">
+            </div>
+
+            <div class="form-group row">
+               <label class="col-sm-2"><i class="fab fa-twitter"></i> Twitter </label>
+               <input type="url" name="twitter" placeholder="http://twitter.com/namakamu" value="<?= $konfigurasi->twitter?>" class="form-control col-sm-10">
+            </div>
+      
+            <div class="form-group row">
+               <label class="col-sm-2"><i class="fab fa-youtube"></i> Youtube </label>
+               <input type="url" name="yt" placeholder="http://youtube.com/namakamu" value="<?= $konfigurasi->yt?>" class="form-control col-sm-10">
+            </div>
             
 
             <h4>Icon</h4><hr>

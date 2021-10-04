@@ -1,9 +1,9 @@
  <!-- Jumbotorn -->
 
- <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/katalog.jpg')?>); background-size:cover;">
+ <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/katalog.jpg')?>); background-size:cover; filter:brightness(85%)">
         <div class="container text-white">
           <h1 class="display-4">Katalog Spesies</h1>
-          <p class="lead">Ini Adalah Kumpulan Katalog Spesies.</p>
+          <p class="lead">Kumpulan Katalog Spesies Berbagai Jenis Tanaman.</p>
         </div>
       </div>
 

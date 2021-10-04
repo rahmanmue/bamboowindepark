@@ -1,5 +1,5 @@
 <div class="container mt-5">
-   <div id="border" class="card">
+   <div class="card p-4" style="margin-top:100px;">
 
   <?php if($this->session->flashdata('alertBerita') == 'alert alert-success') :?>
    <div class="<?=$this->session->flashdata('alertBerita')?> alert-dismissible fade show" role="alert">
@@ -12,7 +12,7 @@
    
    <div class="row">
       <div class="col-md-12">
-         <a href="<?=base_url('list-berita/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> ARTIKEL</a>
+         <a href="<?=base_url('list-berita/tambah')?>" class="btn btn-primary float-right"><i class="fa fa-plus"></i> BERITA</a>
       </div>
    </div>
    

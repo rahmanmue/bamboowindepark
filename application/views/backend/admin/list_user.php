@@ -1,6 +1,6 @@
 
 <div class="container mt-5">
-<div id="border">
+<div class="card p-4" style="margin-top:100px;">
    
    <?php if($this->session->flashdata('alertAdmin') == 'alert alert-success') {?>
       <div class="<?=$this->session->flashdata('alertAdmin')?> alert-dismissible fade show" role="alert">
@@ -11,6 +11,7 @@
       </div>
    <?php }?>
 
+<div class="table-responsive">
 <table class="table table-striped table-bordered table-hover" id="table">
 <thead>
     <tr class="font-weight-bold">
@@ -49,5 +50,6 @@
 <?php $i++; } ?>
 </tbody>
 </table>
+</div>
 </div>
 </div>

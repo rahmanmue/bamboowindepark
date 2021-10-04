@@ -1,7 +1,7 @@
 <div class="container mt-5">
 
 
-   <div class="card ">
+   <div class="card" style="margin-top:80px;">
          <div class="card-header font-weight-bold text-center">
             <?=$title?>
          </div>
@@ -60,19 +60,19 @@
                <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-eye"></i></div>
                </div>
-               <?php if($userAktif->status == 'user'){?>
+               <?php if($userAktif->status == 'admin'){?>
                   <input type="text" name="status" class="form-control" placeholder="status" required value="<?= $userAktif->status; ?>" readonly disabled>
-               <?php }else if($userAktif->status == 'admin'){?>
+               <?php }else if($userAktif->status == 'superadmin'){?>
                   <select name="status" class="form-control">
-                      <option value="admin" <?php if( 'admin'== $userAktif->status) {echo"selected";}?>>Admin</option>
-                      <option value="user">User</option>
+                      <option value="superadmin" <?php if( 'superadmin'== $userAktif->status) {echo"selected";}?>>Super Admin</option>
+                      <option value="admin">Admin</option>
                   </select>
                <?php }?>               
                </div>
             </div>        
    
             <input type="submit" name="submit" value="Simpan" class="btn btn-primary ml-3">
-            <a href="<?= base_url('dashboard')?>" class="btn btn-warning">Kembali</a>
+            <a href="<?= base_url('dashboard-web')?>" class="btn btn-warning">Kembali</a>
          </form>
         
       

@@ -1,4 +1,4 @@
-<div id="border">
+<div class="card p-4 mx-2" style="margin-top:80px;">
 <h3 class="panel panel-back mt-5 font-weight-bold" style="padding: 10px;">DASHBOARD PAGE</h3>
 
 

@@ -1,5 +1,5 @@
 <div class="container mt-5">
-   <div id="border">
+   <div class="card p-4" style="margin-top:100px;">
 
   <?php if($this->session->flashdata('alertBanner') == 'alert alert-success') :?>
    <div class="<?=$this->session->flashdata('alertBanner')?> alert-dismissible fade show" role="alert">

@@ -64,73 +64,13 @@
 
 
 
-    <!-- Footer -->
-    <footer class="text-lg-start mt-5">
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-6 mb-4 mb-md-0 small-devices col-xs-12">
-            <h5 class="text-uppercase">Lokasi</h5>
-    
-            <div class="card text-light text-center my-4" style="max-width: 22rem;" >
-              <div class="card-body text-light" >
-                  <iframe
-                      src="<?=$site->google_maps?>"
-                      width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-          </div>
-          </div>
-          <!--Grid column-->
-    
-          <!--Grid column-->
-          <div class="col-md-6 mb-4 mb-md-0">
-            <h5>Contact Us</h5>
-
-            <div class="mt-4">
-              <p><i class="fas fa-map-marker-alt"></i> Alamat</p>
-              <p><?=$site->alamat?></p> 
-            </div>
-            
-            <div class="mt-5">
-              <h6><i class="fas fa-fw fa-phone"></i> No Telepon</h6>
-              <h5><?=$site->no_telp?></h5> 
-            </div>
-
-            <div class="my-5">
-                <h6><i class="fas fa-fw fa-envelope"></i> Email</h6>
-                <h6><?=$site->email?></h6>
-              </div>
-            <!-- link -->
-            <div>
-              <h6>Sosial Media</h6>
-              <a href="<?=$site->fb?>" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-facebook-f"></i></button>
-              </a>
-              <a href="<?=$site->ig?>" style="text-decoration: none;">
-                <button class="btn btn-light"><i class="fab fa-fw fa-instagram"></i></button>
-              </a>
-              <a href="<?=$site->twitter?>" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-twitter"></i></button>
-              </a>
-              <a href="<?=$site->yt?>" style="text-decoration: none;">
-                  <button class="btn btn-light"><i class="fab fa-fw fa-youtube"></i></button>
-              </a>
-          </div>
-          <!-- end link -->
-          
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </div>
-      <!-- Grid container -->
-    
+     <!-- Footer -->
+     <footer class="text-lg-start mt-5">
+     
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2021 Copyright:
-        <a class="text-dark" href="<?=base_url()?>">WikiPlant.com</a>
+        <a class="text-dark" href="<?=base_url()?>"><?=$site->namaweb?></a>
       </div>
       <!-- Copyright -->
 
