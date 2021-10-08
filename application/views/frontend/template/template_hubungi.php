@@ -70,7 +70,12 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2021 Copyright:
-        <a class="text-dark" href="<?=base_url()?>"><?=$site->namaweb?></a>
+        <a class="text-dark" href="<?=base_url()?>"><?=$site->namaweb?> </a> | Made By  
+        <!-- Button trigger modal -->
+          <button type="button" class="border-0 bg-transparent text-warning" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-heart" style="color:red;"></i> Team Ummi 
+          </button>
+
       </div>
       <!-- Copyright -->
 
@@ -80,7 +85,32 @@
     
     
 
-    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog text-dark" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Team UMMI</h5>
+          </div>
+          <div class="modal-body">
+            <table class="">
+              <tr>
+                <td>Pembuat</td>
+                <td class="px-2">:</td>
+                <td>Hahaha</td>
+              </tr>
+              <tr>
+                <td>Pembuat nya asdad</td>
+                <td class="px-2">:</td>
+                <td>Hahaha</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="<?=base_url('assets/js/jquery-3.5.1.min.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>

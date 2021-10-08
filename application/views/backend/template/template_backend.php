@@ -21,8 +21,47 @@
     <link rel="stylesheet" href="<?= base_url('assets/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css'); ?>" />
 
     <!-- JS -->
-   <script src="<?=base_url('assets/ckeditor/ckeditor.js');?>" ></script>
-   <script src="<?=base_url('assets/ckfinder/ckfinder.js');?>" ></script>
+  
+   <script src="<?=base_url('assets/tinymce/js/tinymce/tinymce.min.js')?>"></script>
+   <script>tinymce.init({
+      selector:'#tinymce',
+      height:800,
+      plugins: [
+			 "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+			 "searchreplace wordcount visualblocks visualchars code fullscreen",
+			 "insertdatetime nonbreaking save table contextmenu directionality",
+			 "emoticons template paste textcolor colorpicker textpattern"
+		],
+		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image responsivefilemanager",
+		automatic_uploads: true,
+		image_advtab: true,
+		images_upload_url: "<?php echo base_url("Tinymce/tinymce_upload")?>",
+		file_picker_types: 'image', 
+		paste_data_images:true,
+		relative_urls: false,
+		remove_script_host: false,
+		  file_picker_callback: function(cb, value, meta) {
+			 var input = document.createElement('input');
+			 input.setAttribute('type', 'file');
+			 input.setAttribute('accept', 'image/*');
+			 input.onchange = function() {
+				var file = this.files[0];
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+				   var id = 'post-image-' + (new Date()).getTime();
+				   var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+				   var blobInfo = blobCache.create(id, file, reader.result);
+				   blobCache.add(blobInfo);
+				   cb(blobInfo.blobUri(), { title: file.name });
+				};
+			 };
+			 input.click();
+		  }
+      });
+   
+   </script>
+
   
   </head>
   <body>
@@ -45,7 +84,7 @@
                   <a class="nav-link btn btn-success text-white menu-icon" href="<?=base_url()?>" target="blank"><i class="fas fa-home"></i><span class="ml-2">HomePage</span></a>
                </li>
                <li class="nav-item ">
-                  <a class="nav-link btn btn-danger text-white menu-icon" href="<?=base_url('auth/logout');?>"><i class="fas fa-sign-out-alt"></i><span class="ml-2">Logout</span></a>
+                  <a class="nav-link btn btn-danger text-white menu-icon" href="<?=base_url('logout_u');?>"><i class="fas fa-sign-out-alt"></i><span class="ml-2">Logout</span></a>
                </li> 
             </ul>
          </div>
@@ -84,7 +123,7 @@
 
             <li>
                <a href="<?=base_url('list-katalog');?>" class="<?=menuAktif('katalog')?>">
-                  <i class="fas fa-list"></i><span class="ml-3">KATALOG SPESIES</span>
+                  <i class="fas fa-seedling"></i><span class="ml-3">KATALOG SPESIES</span>
                </a>
             </li>
 
@@ -123,7 +162,7 @@
 
             <li>
                <a href="<?=base_url('list-katalog');?>" class="<?=menuAktif('katalog')?>">
-                  <i class="fas fa-list"></i><span class="ml-3">KATALOG SPESIES</span>
+                  <i class="fas fa-seedling"></i><span class="ml-3">KATALOG SPESIES</span>
                </a>
             </li>
          <?php endif; ?>
@@ -158,10 +197,10 @@
     <script src="<?= base_url('assets/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.min.js'); ?>"></script>
     <script>
        //  CKEDITOR
-       var editor = CKEDITOR.replace('editor',{
-          height : 1200
-       });
-       CKFinder.setupCKEditor(editor);
+      //  var editor = CKEDITOR.replace('editor',{
+      //     height : 1200
+      //  });
+      //  CKFinder.setupCKEditor(editor);
 
       //  var editor2 = CKEDITOR.replace('editor2', {
       //     height: 800

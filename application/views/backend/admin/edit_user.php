@@ -9,13 +9,18 @@
          <div class="card-body">
           <form action="<?=$action?>" method="post">
             
-            <input type="hidden" name="id" value="<?= $userAktif->id_auth; ?>">
+            <input type="hidden" name="id" value="<?= $user->id_auth; ?>">
             <div class="col-auto">
-               <?php if($this->session->flashdata('gagal')) { 
-                  echo '<div class="alert alert-danger">';
-                  echo $this->session->flashdata('gagal');
-                  echo '</div>';
-               } ?>
+               <?php  if($this->session->flashdata('gagal')){
+                     $alert = $this->session->flashdata('alert');
+                     echo 
+                     '<div class="alert alert-danger alert-dismissible fade show" role="alert">'. 
+                        $this->session->flashdata('gagal'). '
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>';
+                  } ?>
             </div>
 
             <div class="col-auto">
@@ -24,7 +29,7 @@
                <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-tag"></i></div>
                </div>
-               <input type="text" class="form-control" id="inlineFormInputGroup" name="nama" placeholder="Nama"  required  value="<?= $userAktif->nama; ?>">
+               <input type="text" class="form-control" id="inlineFormInputGroup" name="nama" placeholder="Nama"  required  value="<?= $user->nama; ?>">
                </div>
             </div>
 
@@ -34,7 +39,7 @@
                <div class="input-group-prepend">
                   <div class="input-group-text">@</div>
                </div>
-               <input type="email" class="form-control" id="inlineFormInputGroup" name="email" placeholder="Alamat email" required value="<?= $userAktif->email; ?>">
+               <input type="email" class="form-control" id="inlineFormInputGroup" name="email" placeholder="Alamat email" required value="<?= $user->email; ?>">
                </div>
             </div>
 
@@ -44,7 +49,7 @@
                <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-key"></i></div>
                </div>
-               <input type="hidden" name="passwordLama" value="<?= $userAktif->password; ?>">
+               <input type="hidden" name="passwordLama" value="<?= $user->password; ?>">
                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Ketik password baru jika ingin diganti atau biarkan kosong" name="password" >
                </div>
             </div>
@@ -59,8 +64,8 @@
                   <input type="text" name="status" class="form-control" placeholder="status" required value="<?= $userAktif->status; ?>" readonly disabled>
                <?php }else if($userAktif->status == 'superadmin'){?>
                   <select name="status" class="form-control">
-                      <option value="superadmin" <?php if( 'superadmin'== $userAktif->status) {echo"selected";}?>>Super Admin</option>
-                      <option value="admin">Admin</option>
+                      <option value="superadmin" <?php if( 'superadmin'== $user->status) {echo"selected";}?>>Super Admin</option>
+                      <option value="admin" <?php if( 'admin'== $user->status) {echo"selected";}?>>Admin</option>
                   </select>
                <?php }?>               
                </div>

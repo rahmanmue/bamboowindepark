@@ -11,7 +11,7 @@ class M_Berita extends CI_Model{
 
    public function upload(){
       $config['upload_path']='./assets/uploads/cover/';
-      $config['allowed_types']='gif|jpg|png|jpeg';
+      $config['allowed_types']='jpg|png|jpeg';
       $config['max_size']='2048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('gambar')){
@@ -64,7 +64,8 @@ class M_Berita extends CI_Model{
    public function getLimitThree(){
       $this->db->select('*');
       $this->db->from('berita');
-      $this->db->limit(3, 'DESC');
+      $this->db->limit(3);
+      $this->db->order_by('id_berita','DESC');
       $query = $this->db->get();
       return $query->result();
    }
@@ -74,6 +75,7 @@ class M_Berita extends CI_Model{
       $this->db->from('berita');
       $this->db->where('berita.status', 'publish');
       $this->db->limit($perHalaman,$dataMulai);
+      $this->db->order_by('id_berita','DESC');
       $query = $this->db->get();
       return $query->result();
    }

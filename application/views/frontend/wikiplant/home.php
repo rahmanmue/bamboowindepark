@@ -76,7 +76,7 @@
             <div class="row mt-4 mb-5">
               <div class="col-md-12">
                 <div class="text-center">
-                  <a href="#" class="btn btn-outline-primary roboto">Lihat Lainnya</a>
+                  <a href="<?=base_url('berita')?>" class="btn btn-outline-primary">Lihat Lainnya</a>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
                 <div class="card-body">
                   <img src="<?=base_url("assets/uploads/katalog/".$katalog->gambar) ?>" class="img-fluid mb-3">
                   <h5 class="card-title poppins"><?=$katalog->judul?></h5>
-                  <a href="<?= base_url('katalog/'.$katalog->slug_judul)?>" class="btn btn-gl roboto" >Baca Selengkapnya</a>
+                  <a href="<?= base_url('katalog/'.$katalog->slug_judul)?>" class="btn btn-gl" >Baca Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@
            
             <div class="col-md-12 mt-5 mb-4">
               <div class="text-center">
-                <a href="#" class="btn btn-outline-success roboto">Lihat Lainnya</a>
+                <a href="<?=base_url('katalog')?>" class="btn btn-outline-success">Lihat Lainnya</a>
               </div>
             </div>
           

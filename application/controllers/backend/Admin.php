@@ -50,6 +50,7 @@ class Admin extends CI_Controller {
                'nama' => $this->input->post('nama',true),
                'email' => $this->input->post('email',true),
                'password' => $this->input->post('passwordLama',true),
+               'status'=>$this->input->post('status',true),
                'tanggal'=>date('Y-m-d')
             ];
          }else if(strlen($this->input->post('password')) > 1 && strlen($this->input->post('password')) < 6){
@@ -60,13 +61,14 @@ class Admin extends CI_Controller {
                'nama' => $this->input->post('nama',true),
                'email' => $this->input->post('email',true),
                'password' => $this->password->hash($this->input->post('password',true)),
+               'status'=>$this->input->post('status',true),
                'tanggal'=>date('Y-m-d')
             ];
          }   
          $this->M_Auth->edit($dataUser);
          $datapesan =  [ 
             'alertAdmin'=> 'alert alert-success',
-            'pesan' => 'Akun anda berhasil di Edit' 
+            'pesan' => 'Akun berhasil di Edit' 
          ];
          $this->session->set_flashdata($datapesan);
          redirect('list-admin');

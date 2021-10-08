@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container my-5">
    <div class="card p-4" style="margin-top:100px;">
 
   <?php if($this->session->flashdata('alertKatalog') == 'alert alert-success') :?>
@@ -50,7 +50,7 @@
                src="<?=base_url('assets/uploads/qrcode/'.$katalog->slug_judul.'.png')?>" 
                width="100"
                alt="">
-            <a href="<?=base_url('assets/uploads/qrcode/'.$katalog->slug_judul.'.png')?>">Lihat QrCode</a>
+            <a href="<?=base_url('assets/uploads/qrcode/'.$katalog->slug_judul.'.png')?>">Lihat</a>
          </td>
          <td>
          <div class="text-center d-flex" >

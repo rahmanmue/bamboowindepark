@@ -89,7 +89,7 @@ class Banner extends CI_Controller {
  public function hapus(){
     $this->M_Banner->hapusBanner($this->input->post('id'));
     $pesan = [
-       'alertBanner'=>'alert alert-danger',
+       'alertBanner'=>'alert alert-success',
        'pesan'=>'Data Berhasil dihapus'
     ];
     $this->session->set_flashdata($pesan);

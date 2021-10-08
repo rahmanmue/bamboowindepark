@@ -51,7 +51,7 @@ class Auth extends CI_Controller {
    
                $this->session->set_flashdata($dataPesan);
                //tampilkan halaman login
-               redirect('auth/login');
+               redirect('login_u');
             }
    
          }
@@ -86,7 +86,7 @@ class Auth extends CI_Controller {
             ];
 
             $this->M_Auth->tambah($data);
-            redirect('auth/login');
+            redirect('login_u');
            
          }  
     }
@@ -95,7 +95,7 @@ class Auth extends CI_Controller {
     {
         $dataLogin = ['user_id','nama'];
         $this->session->unset_userdata($dataLogin);
-        redirect('auth/login');
+        redirect('login_u');
         
     }
 

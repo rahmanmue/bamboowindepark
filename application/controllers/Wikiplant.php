@@ -107,15 +107,20 @@ class Wikiplant extends CI_Controller {
         $template = 'frontend/template/template_web';
         $site	= $this->M_Konfigurasi->get();
         
-        // $config['base_url'] = 'http://localhost/wikiplant/page-katalog/index/';
+        
         $config['base_url'] = base_url('page-katalog/index/');
 		$config['total_rows'] = $this->M_Katalog->countAll();
 		$config['per_page'] = 6;
 		$mulai = $this->uri->segment(3);
 		$this->pagination->initialize($config);
 
-        $listKatalog = $this->M_Katalog->getKatalogPublish($config['per_page'],$mulai);
+        if($this->input->post('keyword', true) && $this->input->post('keyword', true) != ' '){
+            $listKatalog = $this->M_Katalog->getKeyword($this->input->post('keyword', true),$config['per_page'],$mulai);
+        }else{
+            $listKatalog = $this->M_Katalog->getKatalogPublish($config['per_page'],$mulai);
+        }
 
+        
 		$data	= [
             'title'	=> 'Katalog',
             'site'=>$site,       
@@ -141,6 +146,7 @@ class Wikiplant extends CI_Controller {
     public function hubungi(){
         $template = 'frontend/template/template_hubungi';
         $site = $this->M_Konfigurasi->get();
+        
 
         $data=[
 			'title'=>'Hubungi',
@@ -150,4 +156,6 @@ class Wikiplant extends CI_Controller {
 		$this->load->view($template,$data);
 
     }
+
+   
 }

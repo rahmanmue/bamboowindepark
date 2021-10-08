@@ -75,7 +75,7 @@
       
         <div class="form-group">
             <label class="font-weight-bold">Isi Katalog</label>
-            <textarea name="isi_katalog" placeholder="Isi Katalog" id="editor" class="form-control"><?=set_value('isi_katalog',$katalog->isi_katalog ??'')?></textarea>
+            <textarea name="isi_katalog" placeholder="Isi Katalog" id="tinymce" class="form-control"><?=set_value('isi_katalog',$katalog->isi_katalog ??'')?></textarea>
 	    </div>
 
        
@@ -85,7 +85,7 @@
 
 
         <div class="form-group">
-            <input type='hidden' name ='gambarLama' value="<?=$katalog->gambar??'default.png'?>">
+            <input type='hidden' name ='gambarLama' value="<?=$katalog->gambar??''?>">
             <input type="hidden" name = "id" value="<?=$katalog->id_katalog??'';?>">
             <input type="reset" name="reset" value="Reset" class="btn btn-danger btn-lg float-right">
             <input type="submit" name="submit" value="<?=$button;?>" class="btn btn-primary btn-lg float-right mr-1">

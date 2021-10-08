@@ -53,11 +53,12 @@ $route['default_controller'] = 'wikiplant';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
-$route['auth/login'] = 'backend/auth/login';
-$route['auth/register'] = 'backend/auth/register';
-$route['auth/logout'] = 'backend/auth/logout';
+$route['login_u'] = 'backend/auth/login';
+$route['register_u'] = 'backend/auth/register';
+$route['logout_u'] = 'backend/auth/logout';
 
 $route['myprofil'] = 'backend/profil/index';
+$route['myprofil/save'] = 'backend/profil/save';
 
 $route['list-admin'] = 'backend/admin/index';
 $route['list-admin/edit'] = 'backend/admin/edit';

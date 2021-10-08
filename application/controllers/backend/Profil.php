@@ -7,6 +7,7 @@ class Profil extends CI_Controller {
     {
         parent::__construct();
         $this->load->Model('M_Auth');
+        $this->load->library('password');
         login(); 
     }
 

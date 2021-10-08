@@ -14,7 +14,7 @@ class M_Konfigurasi extends CI_Model{
 
    public function upload(){
       $config['upload_path']          = './assets/uploads/logo/';
-      $config['allowed_types']        = 'gif|jpg|png';
+      $config['allowed_types']        = 'jpeg|jpg|png';
       $config['max_size']             = '1048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('icon')){

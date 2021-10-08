@@ -2,8 +2,25 @@
 
  <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/katalog.jpg')?>); background-size:cover; filter:brightness(85%)">
         <div class="container text-white">
-          <h1 class="display-4">Katalog Spesies</h1>
-          <p class="lead">Kumpulan Katalog Spesies Berbagai Jenis Tanaman.</p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+            <h1 class="display-4">Katalog Spesies</h1>
+              <p class="lead">Kumpulan Katalog Spesies Berbagai Jenis Tanaman.</p>
+              <?php if($this->uri->segment('1') == 'katalog') {?>
+              <form action="" method="post" class="d-flex">
+                    <input name="keyword" class="form-control mr-2" type="search" placeholder="Cari Katalog Spesies..." aria-label="Search"/>
+                    <button class="btn btn-primary" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+              </form>
+              <?php } else{?>
+                <a href="<?=base_url('katalog')?>" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </a>
+              <?php } ?>
+            </div>
+          </div>
+          
         </div>
       </div>
 

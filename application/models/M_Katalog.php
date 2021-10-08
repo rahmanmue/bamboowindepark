@@ -11,12 +11,16 @@ class M_Katalog extends CI_Model{
 
    public function upload(){
       $config['upload_path']='./assets/uploads/katalog/';
-      $config['allowed_types']='gif|jpg|png';
+      $config['allowed_types']='jpeg|jpg|png';
       $config['max_size']='2048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('gambar')){
-            unlink(FCPATH.'assets/uploads/katalog/'.$this->input->post('gambarLama'));
-            return $this->upload->data('file_name');  
+            if($this->input->post('gambarLama') == ''){
+               return $this->upload->data('file_name');
+            }else{
+               unlink(FCPATH.'assets/uploads/katalog/'.$this->input->post('gambarLama'));
+               return $this->upload->data('file_name');  
+            }
          }else{
             return $this->input->post('gambarLama');
          }
@@ -52,8 +56,8 @@ class M_Katalog extends CI_Model{
 
     public function hapus($id){
         $filename=$this->detail($id);
-        unlink(FCPATH.'assets/uploads/qrcode/'.$filename->slug_judul);
-        unlink(FCPATH.'assets/uploads/katalog/'. $filename->gambar);
+        unlink(FCPATH.'assets/uploads/katalog/'.$filename->gambar);
+        unlink(FCPATH.'assets/uploads/qrcode/'.$filename->slug_judul.'.png');
 
         $this->db->where(['id_katalog'=>$id]);
         $this->db->delete('katalog');
@@ -68,9 +72,20 @@ class M_Katalog extends CI_Model{
       $this->db->from('katalog');
       $this->db->where('katalog.status', 'publish');
       $this->db->limit($perHalaman,$dataMulai);
+      $this->db->order_by('id_katalog','DESC');
       $query = $this->db->get();
       return $query->result();
    }
+
+   public function getKeyword($keyword = null, $perHalaman=false, $dataMulai=false){
+         $this->db->select('*');
+         $this->db->from('katalog');
+         $this->db->like('judul',$keyword);
+         $this->db->or_like('isi_katalog',$keyword);
+         $this->db->limit($perHalaman,$dataMulai);
+         $this->db->order_by('id_katalog','DESC');
+         return $this->db->where('katalog.status','publish')->get()->result();
+   } 
 
    //read
 	public function bacaKatalog($slug_judul) {
@@ -102,19 +117,7 @@ class M_Katalog extends CI_Model{
 //    }
 
   
-    public function getKeyword($keyword = null){
-        if($keyword){ 
-        $this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');
-        $this->db->from('berita');
-        $this->db->join('k_berita','k_berita.id_kategori=berita.id_kategori','LEFT');
-        $this->db->join('auth','auth.id_auth=berita.id_auth','LEFT');
-        // $this->db->or_like('k_berita.kategori',$keyword);
-        // $this->db->where('berita.status','Publish');
-        $this->db->like('judul',$keyword);
-        // $this->db->or_like('content',$keyword);
-        return $this->db->where('berita.status','publish')->get()->result();      
-        }
-    } 
+    
 
 
    public function listPopuler() {

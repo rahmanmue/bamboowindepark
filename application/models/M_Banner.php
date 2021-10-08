@@ -10,7 +10,7 @@ class M_Banner extends CI_Model{
 // BANNER
    public function uploadBanner(){
       $config['upload_path']='./assets/uploads/banner/';
-      $config['allowed_types']='gif|jpg|png|jpeg';
+      $config['allowed_types']='jpg|png|jpeg';
       $config['max_size']='1048';
       $this->load->library('upload',$config);
          if($this->upload->do_upload('gambar')){

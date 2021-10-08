@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container my-5">
    <div class="card p-4" style="margin-top:100px;">
 
   <?php if($this->session->flashdata('alertBerita') == 'alert alert-success') :?>

@@ -45,15 +45,15 @@ class Katalog extends CI_Controller {
          $dataArtikel = [
             'judul'=>$this->input->post('judul'),
             'slug_judul'=>url_title(strtolower($this->input->post('judul'))),
-            // 'id_kategori'=>$this->input->post('id_kategori'),
             'id_auth'=>$this->session->userdata('user_id'),
             'penulis'=>$this->M_Auth->detail($this->session->userdata('user_id'))->nama,
             'status'=>$this->input->post('status'),
-            // 'klasifikasi'=>$this->input->post('klasifikasi'),
-            // 'deskripsi'=>$this->input->post('deskripsi'),
             'isi_katalog'=>$this->input->post('isi_katalog'),
             'tanggal_post'=>date('Y-m-d H:i:s'),
             'gambar'=> $this->M_Katalog->upload()
+         // 'id_kategori'=>$this->input->post('id_kategori'),
+         //  'klasifikasi'=>$this->input->post('klasifikasi'),
+         //  'deskripsi'=>$this->input->post('deskripsi'),
          ];
 
      
@@ -92,15 +92,15 @@ class Katalog extends CI_Controller {
          $dataArtikel = [
                 'judul'=>$this->input->post('judul'),
                 'slug_judul'=>url_title(strtolower($this->input->post('judul'))),
-                // 'id_kategori'=>$this->input->post('id_kategori'),
                 'id_auth'=>$this->session->userdata('user_id'),
                 'penulis'=>$this->M_Auth->detail($this->session->userdata('user_id'))->nama,
                 'status'=>$this->input->post('status'),
-               //  'klasifikasi'=>$this->input->post('klasifikasi'),
-               //  'deskripsi'=>$this->input->post('deskripsi'),
                 'isi_katalog'=>$this->input->post('isi_katalog'),
                 'tanggal_post'=>date('Y-m-d H:i:s'),
                 'gambar'=> $this->M_Katalog->upload()
+               //'id_kategori'=>$this->input->post('id_kategori'),
+               //'klasifikasi'=>$this->input->post('klasifikasi'),
+               //'deskripsi'=>$this->input->post('deskripsi'),
             ];
 
         $this->M_Katalog->edit($dataArtikel);

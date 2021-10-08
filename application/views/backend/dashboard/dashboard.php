@@ -58,7 +58,7 @@
         <div class="col-md-6 col-sm-6">           
             <div class="panel panel-back noti-box">
                 <span class="icon-box bg-info set-icon">
-                    <i class="fas fa-list 2x text-white"></i>
+                    <i class="fas fa-seedling 2x text-white"></i>
                 </span>
                 <div class="text-box" >
                 <a href="<?=base_url('list-katalog')?>" class= "<?= $status == 'admin' ? 'disabled' : '' ?> ">
