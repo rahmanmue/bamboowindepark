@@ -37,13 +37,18 @@
               </div>
 
               <div class="mt-4">
-                  <h6> Nomor Telepon / Whatsapp</h6>
-                  <a href="https://wa.me/<?=$site->no_telp?>?text=Hai admin ... "><i class="fas fa-fw fa-phone"></i> <?=$site->no_telp?></a> 
+                  <h6><i class="fas fa-fw fa-phone"></i> Nomor Telepon</h6>
+                  <a href="tel:<?=$site->no_telp?>"><?=$site->no_telp?></a> 
               </div>
 
               <div class="mt-4">
-                <h6>Email</h6>
-                <a href="mailto:<?=$site->email?>?subject=Ini adalah Judul Email&body=Hai admin ..."><i class="fas fa-fw fa-envelope"></i><?=$site->email?></a>
+                  <h6><i class="fab fa-fw fa-whatsapp"></i> WhatsApp</h6>
+                  <a href="https://wa.me/<?=$site->wa?>?text=Hai admin ... "> <?=$site->wa?></a>  
+              </div>
+
+              <div class="mt-4">
+                <h6><i class="fas fa-fw fa-envelope"></i> Email</h6>
+                <a href="mailto:<?=$site->email?>?subject=Ini adalah Judul Email&body=Hai admin ..."><?=$site->email?></a>
               </div>
 
 

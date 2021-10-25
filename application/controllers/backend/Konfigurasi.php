@@ -25,10 +25,13 @@ class Konfigurasi extends CI_Controller {
          $data=[
             "namaweb"=>$this->input->post('namaweb',true),
             "deskripsi_web"=>$this->input->post('deskripsi_web',true),
+            "tiket"=>$this->input->post('tiket',true),
+            "operasional"=>$this->input->post('operasional',true),
             "email"=>$this->input->post('email',true),
             "alamat"=>$this->input->post('alamat',true),
             "google_maps"=>$this->input->post('google_maps',true),
             "no_telp"=>$this->input->post('no_telp',true),
+            "wa"=>$this->input->post('wa',true),
             "fb"=>$this->input->post('fb',true),
             "ig"=>$this->input->post('ig',true),
             "twitter"=>$this->input->post('twitter',true),

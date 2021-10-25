@@ -2,8 +2,24 @@
 
 <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/berita.jpg')?>); background-size:cover; filter:brightness(85%);">
         <div class="container text-white">
-          <h1 class="display-4">Berita</h1>
-          <p class="lead">Semua Berita Yang Selalu Update Setiap Minggunya.</p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <h1 class="display-4">Berita</h1>
+              <p class="lead">Semua Berita Yang Selalu Update Setiap Minggunya.</p>
+              <?php if($this->uri->segment('1') == 'berita') {?>
+                  <form action="" method="post" class="d-flex">
+                        <input name="keyword" class="form-control mr-2" type="search" placeholder="Cari Judul Berita..." aria-label="Search"/>
+                        <button class="btn btn-primary" type="submit">
+                          <i class="fas fa-search"></i>
+                        </button>
+                  </form>
+                  <?php } else{?>
+                    <a href="<?=base_url('berita')?>" class="btn btn-primary">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  <?php } ?>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -23,8 +39,31 @@
     <!-- /bambooo -->
 
     <div class="container">
-        <div class="row mt-5">
+        <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Kategori Berita
+            </a>
+            <div class="collapse mt-2" id="collapseExample"> 
+              <div class="card card-body col-md-5">
+                <ul class="list-group list-group-flush">
+                  <?php foreach($listKategori as $kategori):?>
+                    <li class="list-group-item">
+                      <a href="<?=base_url('page-kategori-berita/'.$kategori->slug_kategori)?>" style="text-decoration:none;">
+                        <?=$kategori->kategori?>
+                      </a>
+                    </li>
+                  <?php endforeach;?>
+                </ul>
+              </div>
+            </div>    
+          </div>
+        </div>
 
+
+
+        <div class="row mt-4">
+          
             <?php foreach($listBerita as $berita) : ?>
               <!-- col-md-4 -->
                 <div class="col-md-4">
@@ -40,9 +79,9 @@
               <!-- /col-md-4 -->
             <?php endforeach;?>
 
-
+            
             <div class="col-md-12">
-            <?= $this->pagination->create_links();?>
-          </div>
+              <?= $listBerita != null ? $this->pagination->create_links() : 'Hasil Pencarian Tidak Ada ... ';?>
+            </div>
         </div>
     </div>

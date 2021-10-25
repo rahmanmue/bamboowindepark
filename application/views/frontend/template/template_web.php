@@ -16,7 +16,7 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark " id="header">
         <div class="container">
             <a class="navbar-brand" href="<?=base_url()?>">
               <div class="rounded-circle bg-white p-2 mr-2 d-inline-block align-center">
@@ -86,25 +86,27 @@
     
           <!--Grid column-->
           <div class="col-md-6 mb-4 mb-md-0">
-            <h5>Contact Us</h5>
+            <h5>Kontak Kami</h5>
 
-            <div class="mt-4">
-              <p><i class="fas fa-map-marker-alt"></i> Alamat</p>
+            <div class="mt-5">
+              <h5>Alamat</h5>
               <p><?=$site->alamat?></p> 
+              <div>
+                <a href="tel:<?=$site->no_telp?>" style="text-decoration: none;">
+                  <button class="btn btn-light"><i class="fas fa-fw fa-phone"></i></button>
+                </a>
+                <a href="mailto:<?=$site->email?>?subject=Ini adalah Judul Email&body=Hai admin ..." style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fas fa-fw fa-envelope"></i></button>
+                </a>
+                <a href="https://wa.me/<?=$site->wa?>?text=Hai admin ... " style="text-decoration: none;">
+                    <button class="btn btn-light"><i class="fab fa-fw fa-whatsapp"></i></button>
+                </a>
+              </div>
             </div>
             
-            <div class="mt-5">
-              <h6> Nomor Telepon / Whatsapp</h6>
-              <a href="https://wa.me/<?=$site->no_telp?>?text=Hai admin ... "><i class="fas fa-fw fa-phone"></i> <?=$site->no_telp?></a> 
-            </div>
-
-            <div class="my-5">
-              <h6>Email</h6>
-              <a href="mailto:<?=$site->email?>?subject=Ini adalah Judul Email&body=Hai admin ..."><i class="fas fa-fw fa-envelope"></i><?=$site->email?></a>
-            </div>
             <!-- link -->
-            <div>
-              <h6>Sosial Media</h6>
+            <div class="mt-5">
+              <h5>Sosial Media</h5>
               <a href="<?=$site->fb?>" style="text-decoration: none;">
                   <button class="btn btn-light"><i class="fab fa-fw fa-facebook-f"></i></button>
               </a>
@@ -133,7 +135,7 @@
         <a class="text-dark" href="<?=base_url()?>"><?=$site->namaweb?> </a> | Made By  
         <!-- Button trigger modal -->
           <button type="button" class="border-0 bg-transparent text-warning" data-toggle="modal" data-target="#exampleModal">
-          <i class="fas fa-heart" style="color:red;"></i> Team Ummi 
+          <i class="fas fa-heart" style="color:red;"></i> TIM PHP2D HIMABIO UMMI 
           </button>
 
          
@@ -152,24 +154,29 @@
       <div class="modal-dialog text-dark" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Team UMMI</h5>
+            <h5 class="modal-title" id="exampleModalLabel">TIM PHP2D HIMABIO UMMI </h5>
           </div>
           <div class="modal-body">
-            <table class="">
-              <tr>
-                <td>Pembuat</td>
-                <td class="px-2">:</td>
-                <td>Hahaha</td>
-              </tr>
-              <tr>
-                <td>Pembuat nya asdad</td>
-                <td class="px-2">:</td>
-                <td>Hahaha</td>
-              </tr>
-            </table>
+            DOSEN PENDAMPING : <br> 
+            SUHENDAR,M.PD <br> 
+            BILLYARDI RAMDHAN, S.PD.,M.SI. <br> 
+            PUTRI NIDA NURULAINI <br> 
+            LAMIA PUTRI <br> 
+            DEUDEU ANGGIA <br> 
+            DIANA SILFIANI PUTRI <br> 
+            SITI MAS MASROPAH <br> 
+            ASRI NURAFIPAH <br> 
+            AULIA NURJANUARTI <br> 
+            MUHAMMAD NURFAIZI <br> 
+            ILHAM MUHAMMAD RIZKI <br> 
+            RUDDY INDRA F <br> 
+            FIRHAN NURFAIZI <br> 
+            LAILA RAHMA <br> 
+            SITI NURAZIZAH <br> 
+            MUHAMMAD RAHMAN
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-info" data-dismiss="modal">TUTUP</button>
           </div>
         </div>
       </div>
@@ -177,7 +184,9 @@
     
     
 
-    
+    <a href="#header" id="back-to-top" class="back-btn-shown">
+      <i class="fa fa-angle-up" title="Go top"></i>
+    </a>
 
     <script src="<?=base_url('assets/js/jquery-3.5.1.min.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>

@@ -66,13 +66,22 @@ class Wikiplant extends CI_Controller {
 		$config['total_rows'] = $this->M_Berita->countAll();
 		$config['per_page'] = 6;
 		$this->pagination->initialize($config);
+
+        $listKategori =$this->M_Kberita->getAll();
+
+        if($this->input->post('keyword', true) && $this->input->post('keyword', true) != ' '){
+            $listBerita = $this->M_Berita->getKeyword($this->input->post('keyword', true),$config['per_page'],$mulai);
+        }else{
+            $listBerita = $this->M_Berita->getBeritaPublish($config['per_page'],$mulai);
+        }
        
-        $listBerita = $this->M_Berita->getBeritaPublish($config['per_page'],$mulai);
+       
         
 		$data	= [
             'title'	=> 'Berita',
             'site'=>$site,       
             'listBerita'=> $listBerita,
+            'listKategori'=>$listKategori,
             'isi'=> 'frontend/wikiplant/berita'
         ];
 		$this->load->view($template,$data); 
@@ -82,6 +91,7 @@ class Wikiplant extends CI_Controller {
         $template   = 'frontend/template/template_web';
 		$site		= $this->M_Konfigurasi->get();
 		$kategori	= $this->M_Kberita->bacaKategori($slug_kategori);
+        $listKategori =$this->M_Kberita->getAll();
 
 		// $config['base_url'] = 'http://localhost/wikiplant/page-kategori-berita/'.$slug_kategori.'/';
 		$config['base_url'] = base_url('page-kategori-berita/'.$slug_kategori.'/');
@@ -96,6 +106,7 @@ class Wikiplant extends CI_Controller {
             'title'	=> 'Berita',
             'site'=>$site,       
             'listBerita'=> $listBerita,
+            'listKategori'=>$listKategori,
             'isi'=> 'frontend/wikiplant/berita'
         ];
 

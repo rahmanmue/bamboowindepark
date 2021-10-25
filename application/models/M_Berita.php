@@ -113,6 +113,16 @@ class M_Berita extends CI_Model{
 		return $query->result();
    }
 
+   public function getKeyword($keyword = null, $perHalaman=false, $dataMulai=false){
+      $this->db->select('*');
+      $this->db->from('berita');
+      $this->db->like('judul',$keyword);
+      $this->db->or_like('content',$keyword);
+      $this->db->limit($perHalaman,$dataMulai);
+      $this->db->order_by('id_berita','DESC');
+      return $this->db->where('berita.status','publish')->get()->result();
+   } 
+
    
     
 
@@ -137,19 +147,21 @@ class M_Berita extends CI_Model{
 //       return $this->db->get()->result();
 //    }
 
-   public function getKeyword($keyword = null){
-      if($keyword){ 
-         $this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');
-         $this->db->from('berita');
-         $this->db->join('k_berita','k_berita.id_kategori=berita.id_kategori','LEFT');
-         $this->db->join('auth','auth.id_auth=berita.id_auth','LEFT');
-         // $this->db->or_like('k_berita.kategori',$keyword);
-         // $this->db->where('berita.status','Publish');
-         $this->db->like('judul',$keyword);
-         // $this->db->or_like('content',$keyword);
-         return $this->db->where('berita.status','publish')->get()->result();      
-      }
-   } 
+
+
+   // public function getKeyword($keyword = null){
+   //    if($keyword){ 
+   //       $this->db->select('berita.*, k_berita.kategori, k_berita.slug_kategori, auth.nama');
+   //       $this->db->from('berita');
+   //       $this->db->join('k_berita','k_berita.id_kategori=berita.id_kategori','LEFT');
+   //       $this->db->join('auth','auth.id_auth=berita.id_auth','LEFT');
+   //       // $this->db->or_like('k_berita.kategori',$keyword);
+   //       // $this->db->where('berita.status','Publish');
+   //       $this->db->like('judul',$keyword);
+   //       // $this->db->or_like('content',$keyword);
+   //       return $this->db->where('berita.status','publish')->get()->result();      
+   //    }
+   // } 
 
   
 

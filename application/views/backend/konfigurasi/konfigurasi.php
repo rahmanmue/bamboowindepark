@@ -21,11 +21,6 @@
             </div>
             
             <div class="form-group row">
-               <label class="col-sm-2">Deskripsi Web</label>
-               <textarea name="deskripsi_web" rows="3" class="form-control col-sm-10" placeholder="Tentang Website"><?= $konfigurasi->deskripsi_web?></textarea>
-            </div>
-            
-            <div class="form-group row">
                <label class="col-sm-2">Official Email</label>
                <input type="email" name="email" placeholder="youremail@address.com" value="<?= $konfigurasi->email?>" class="form-control col-sm-10" valid_email | required>
             </div>
@@ -37,8 +32,37 @@
             </div>
 
             <div class="form-group row">
-            <label class="col-sm-2">Alamat</label>
-            <textarea name="alamat" rows="3" class="form-control col-sm-10" placeholder="Alamat perusahaan/organisasi"><?= $konfigurasi->alamat?></textarea>
+            <label class="col-sm-2">WhatsApp</label>
+            <input type="text" name="wa" value="<?= $konfigurasi->wa?>" class="form-control col-sm-10" required>
+
+            </div>
+
+            <div>
+               <label>Deskripsi Web</label>
+               <textarea name="deskripsi_web" class="col-sm-12 form-control" id="konfigurasi1">
+                  <?= $konfigurasi->deskripsi_web?>
+               </textarea>
+            </div>
+
+            <div class="mt-4">
+               <label>Alamat</label>
+               <textarea name="alamat" class="form-control col-sm-12" id="konfigurasi2">
+                  <?= $konfigurasi->alamat?>
+               </textarea>
+            </div>
+
+            <div class="mt-4">
+               <label>Operasional</label>
+               <textarea name="operasional" class="form-control col-sm-12" id="konfigurasi3">
+                  <?= $konfigurasi->operasional?>
+               </textarea>
+            </div>
+
+            <div class="my-4">
+               <label>Tiket</label>
+               <textarea name="tiket" class="form-control col-sm-12" id="konfigurasi4">
+                  <?= $konfigurasi->tiket?>
+               </textarea>
             </div>
             
             <h4>Sosial Media</h4><hr>

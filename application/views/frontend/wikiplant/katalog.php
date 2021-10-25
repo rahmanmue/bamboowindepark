@@ -1,11 +1,11 @@
  <!-- Jumbotorn -->
 
- <div class="jumbotron jumbotron-fluid" style="background-image: url(<?=base_url('assets/uploads/logo/katalog.jpg')?>); background-size:cover; filter:brightness(85%)">
+ <div class="jumbotron jumbotron-fluid" aria-label="https://unsplash.com/photos/fSAyrw46Tx4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="background-image: url(<?=base_url('assets/uploads/logo/bambu.jpg')?>); background-size:cover; filter:brightness(85%)">
         <div class="container text-white">
           <div class="row">
             <div class="col-md-6 mb-4">
             <h1 class="display-4">Katalog Spesies</h1>
-              <p class="lead">Kumpulan Katalog Spesies Berbagai Jenis Tanaman.</p>
+            <p class="lead">Kumpulan Katalog Spesies Berbagai Jenis Tanaman.</p>
               <?php if($this->uri->segment('1') == 'katalog') {?>
               <form action="" method="post" class="d-flex">
                     <input name="keyword" class="form-control mr-2" type="search" placeholder="Cari Katalog Spesies..." aria-label="Search"/>
@@ -58,7 +58,7 @@
           <?php endforeach;?>
 
           <div class="col-md-12">
-            <?= $this->pagination->create_links();?>
+            <?= $listKatalog != null ? $this->pagination->create_links() : 'Hasil Pencarian Tidak Ada ... ';?>
           </div>
          
         </div>

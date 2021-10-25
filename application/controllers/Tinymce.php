@@ -5,7 +5,7 @@ class Tinymce extends CI_Controller {
     function tinymce_upload(){    
             $config['upload_path'] = './assets/uploads/files/';
             $config['allowed_types'] = 'jpg|png|jpeg';
-            $config['max_size'] =1048;
+            $config['max_size'] =1548;
             $this->load->library('upload', $config);
             if ( !$this->upload->do_upload('file')) {
                 $this->output->set_header('HTTP/1.0 500 Server Error');

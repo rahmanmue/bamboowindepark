@@ -23,7 +23,8 @@
     <!-- JS -->
   
    <script src="<?=base_url('assets/tinymce/js/tinymce/tinymce.min.js')?>"></script>
-   <script>tinymce.init({
+   <script>
+   tinymce.init({
       selector:'#tinymce',
       height:800,
       plugins: [
@@ -59,6 +60,26 @@
 			 input.click();
 		  }
       });
+
+      tinymce.init({
+         selector: '#konfigurasi1',
+         height: 300
+      });
+
+      tinymce.init({
+         selector: '#konfigurasi2',
+         height: 200
+      });
+
+      tinymce.init({
+         selector: '#konfigurasi3',
+         height: 300
+      });
+
+      tinymce.init({
+         selector: '#konfigurasi4',
+         height: 300
+      });
    
    </script>
 
@@ -71,7 +92,7 @@
       <button type="button" id="sidebarCollapse" class="btn btn-info">
          <i class="fas fa-align-left"></i>
       </button>
-      <a href="#" class="navbar-brand menu-item">WikiPlant</a>
+      <a href="#" class="navbar-brand menu-item"><?=$site->namaweb?></a>
          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-align-justify"></i>
          </button>

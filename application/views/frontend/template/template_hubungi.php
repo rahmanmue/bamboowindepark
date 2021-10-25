@@ -73,7 +73,7 @@
         <a class="text-dark" href="<?=base_url()?>"><?=$site->namaweb?> </a> | Made By  
         <!-- Button trigger modal -->
           <button type="button" class="border-0 bg-transparent text-warning" data-toggle="modal" data-target="#exampleModal">
-          <i class="fas fa-heart" style="color:red;"></i> Team Ummi 
+          <i class="fas fa-heart" style="color:red;"></i> TIM PHP2D HIMABIO UMMI
           </button>
 
       </div>
@@ -89,24 +89,29 @@
       <div class="modal-dialog text-dark" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Team UMMI</h5>
+            <h5 class="modal-title" id="exampleModalLabel">TIM PHP2D HIMABIO UMMI</h5>
           </div>
           <div class="modal-body">
-            <table class="">
-              <tr>
-                <td>Pembuat</td>
-                <td class="px-2">:</td>
-                <td>Hahaha</td>
-              </tr>
-              <tr>
-                <td>Pembuat nya asdad</td>
-                <td class="px-2">:</td>
-                <td>Hahaha</td>
-              </tr>
-            </table>
+          DOSEN PENDAMPING : <br> 
+          SUHENDAR,M.PD <br> 
+          BILLYARDI RAMDHAN, S.PD.,M.SI. <br> 
+          PUTRI NIDA NURULAINI <br> 
+          LAMIA PUTRI <br> 
+          DEUDEU ANGGIA <br> 
+          DIANA SILFIANI PUTRI <br> 
+          SITI MAS MASROPAH <br> 
+          ASRI NURAFIPAH <br> 
+          AULIA NURJANUARTI <br> 
+          MUHAMMAD NURFAIZI <br> 
+          ILHAM MUHAMMAD RIZKI <br> 
+          RUDDY INDRA F <br> 
+          FIRHAN NURFAIZI <br> 
+          LAILA RAHMA <br> 
+          SITI NURAZIZAH <br> 
+          MUHAMMAD RAHMAN
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-info" data-dismiss="modal">TUTUP</button>
           </div>
         </div>
       </div>
