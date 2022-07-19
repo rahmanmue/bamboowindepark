@@ -23,9 +23,15 @@
 		function onlySuperAdmin(){
 			$ci =& get_instance();
 			$ci->load->Model('M_Auth');
-			if($ci->M_Auth->detail($ci->session->userdata('user_id'))->status == 'admin'){
+			if($ci->session->userdata('user_id') != null){
+				$status = $ci->M_Auth->detail($ci->session->userdata('user_id'))->status;
+				if($status != 'superadmin'){
+					return show_404();
+				}
+			}else{
 				return show_404();
 			}
+			
 		}
 	}
 	

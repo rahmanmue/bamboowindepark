@@ -59,10 +59,11 @@ class Auth extends CI_Controller {
 
     public function register()
     {
+        onlySuperAdmin();
         $template = 'backend/template/template_auth';
-        if($this->session->userdata('user_id')){
-           redirect('dashboard-web');
-         }
+      //   if($this->session->userdata('user_id')){
+      //      redirect('dashboard-web');
+      //    }
     
          $this->form_validation->set_rules('nama','Nama','required');
          $this->form_validation->set_rules('email','Email','required|valid_email|is_unique[auth.email]');
